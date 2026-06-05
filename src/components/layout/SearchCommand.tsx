@@ -70,9 +70,16 @@ export function SearchCommand({ open, onOpenChange }: SearchCommandProps) {
 
   const handleSelect = (url: string) => {
     onOpenChange(false);
+    
+    // Handle telephone links
     if (url.startsWith("tel:")) {
       window.location.href = url;
-    } else {
+      return;
+    }
+    
+    // Only navigate if we're not already on this page
+    // This prevents "hard navigate to same URL" errors
+    if (router.asPath !== url) {
       router.push(url);
     }
   };
