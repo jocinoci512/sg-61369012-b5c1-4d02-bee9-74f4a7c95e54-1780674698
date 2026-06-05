@@ -1,6 +1,6 @@
 ---
 title: FAQ Accordion Section
-status: in_progress
+status: done
 priority: high
 type: feature
 tags: [faq, homepage, accordion]
@@ -8,17 +8,3 @@ created_by: agent
 created_at: 2026-06-05T09:31:28Z
 position: 3
 ---
-
-## Notes
-Create premium accordion-style FAQ section for homepage with 8-10 questions covering common concerns — pricing, process, success rates, legal compliance, data security.
-
-## Checklist
-- [x] Create FAQSection component with accordion UI
-- [x] Add 10 questions covering: pricing, timeline, success rate, legal, security, process, refunds, cases handled, qualifications, contact
-- [x] Style with navy/gold accents and premium typography
-- [x] Add to homepage before footer
-
-## Acceptance
-- FAQs answer key decision-making questions
-- Accordion feels sophisticated with smooth animations
-- Design matches Trust & Authority system

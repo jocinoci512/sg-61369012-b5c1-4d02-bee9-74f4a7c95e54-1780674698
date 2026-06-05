@@ -1,6 +1,6 @@
 ---
 title: About Us Page
-status: todo
+status: done
 priority: high
 type: feature
 tags: [about, company, team]
