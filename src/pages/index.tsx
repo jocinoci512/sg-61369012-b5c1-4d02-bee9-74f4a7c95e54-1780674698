@@ -36,18 +36,17 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>CipherTrace | Secure Your Crypto Future with Blockchain Intelligence</title>
-        <meta name="description" content="World-class blockchain intelligence to combat fraud and protect your crypto assets. Recover from scams with CipherTrace forensic tools and AML compliance solutions." />
-        <meta name="keywords" content="CipherTrace, blockchain intelligence, crypto security, AML compliance, cryptocurrency forensics, scam recovery, Mastercard crypto, blockchain analytics" />
-        <meta property="og:title" content="CipherTrace: Securing Your Crypto Future" />
-        <meta property="og:description" content="Leading blockchain intelligence platform for crypto security, scam recovery, and AML compliance. A Mastercard Company." />
+        <title>CipherTrace Recovery | Professional Crypto Fraud Investigation & Asset Recovery</title>
+        <meta name="description" content="Financial-grade blockchain forensics and cryptocurrency recovery services. $754M+ recovered for 37,000+ victims. Licensed investigators with 99.8% success rate." />
+        <meta name="keywords" content="crypto recovery, blockchain forensics, cryptocurrency fraud investigation, stolen crypto, fund recovery, scam recovery, digital asset tracing" />
+        <meta property="og:title" content="CipherTrace Recovery | Recover Your Stolen Crypto Assets" />
+        <meta property="og:description" content="Professional blockchain investigation and fund recovery. Trace stolen cryptocurrency across global networks with financial-grade forensics." />
         <meta property="og:url" content="https://ciphertracers.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://ciphertracers.com/og-image.jpg" />
         <link rel="canonical" href="https://ciphertracers.com" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
+      <div className="min-h-screen bg-background">
         <Header />
         
         <main>
@@ -57,25 +56,25 @@ export default function HomePage() {
           {/* Trust Signals */}
           <TrustSignals />
 
-          {/* Video Testimonials Section - NEW */}
-          <section className="py-16 md:py-24 bg-white">
-            <div className="container mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-              <div className="text-center mb-12">
-                <Badge variant="secondary" className="mb-3 bg-blue-100 text-blue-700">
+          {/* Video Testimonials Section */}
+          <section className="py-20 md:py-28 bg-card">
+            <div className="container">
+              <div className="text-center mb-16">
+                <Badge variant="navy" className="mb-4">
                   <Play className="h-3 w-3 mr-1" />
-                  Video Proof
+                  Verified Testimonials
                 </Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                  Real Clients. Real Recovery. Real Hope.
+                <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                  Real Recovery Stories
                 </h2>
-                <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-                  Watch actual clients share their journey from scam victim to successful fund recovery with CipherTrace blockchain forensics.
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                  Watch actual clients share their journey from fraud victim to successful fund recovery with our blockchain forensics team.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="grid md:grid-cols-3 gap-8 mb-12">
                 {featuredVideos.map((video) => (
-                  <Card key={video.id} className="overflow-hidden shadow-lg hover:shadow-xl transition-all group border-slate-200">
+                  <Card key={video.id} className="overflow-hidden group hover:shadow-2xl transition-all duration-300">
                     <CardContent className="p-0">
                       <div className="relative w-full bg-slate-900" style={{ paddingBottom: "56.25%" }}>
                         <iframe
@@ -86,13 +85,13 @@ export default function HomePage() {
                           title={video.title}
                         />
                       </div>
-                      <div className="p-4 bg-white">
-                        <h3 className="font-semibold text-slate-900 mb-2">{video.title}</h3>
+                      <div className="p-6 bg-card">
+                        <h3 className="font-serif text-lg font-semibold text-foreground mb-3">{video.title}</h3>
                         <div className="flex items-center justify-between">
-                          <span className="text-sm text-slate-600">{video.location}</span>
-                          <div className="flex gap-1">
+                          <span className="text-sm text-muted-foreground">{video.location}</span>
+                          <div className="flex gap-0.5">
                             {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                              <Star key={i} className="h-4 w-4 fill-accent text-accent" />
                             ))}
                           </div>
                         </div>
@@ -103,8 +102,8 @@ export default function HomePage() {
               </div>
 
               {/* Additional Videos Row */}
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-all border-slate-200">
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300">
                   <CardContent className="p-0">
                     <div className="relative w-full bg-slate-900" style={{ paddingBottom: "56.25%" }}>
                       <iframe
@@ -115,13 +114,13 @@ export default function HomePage() {
                         title="Ponzi Scheme Recovery"
                       />
                     </div>
-                    <div className="p-4 bg-white">
-                      <h3 className="font-semibold text-slate-900 mb-2">Ponzi Scheme - $203K Recovered</h3>
+                    <div className="p-6 bg-card">
+                      <h3 className="font-serif text-lg font-semibold text-foreground mb-3">Ponzi Scheme - $203K Recovered</h3>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-slate-600">Australia 🇦🇺</span>
-                        <div className="flex gap-1">
+                        <span className="text-sm text-muted-foreground">Australia 🇦🇺</span>
+                        <div className="flex gap-0.5">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                            <Star key={i} className="h-4 w-4 fill-accent text-accent" />
                           ))}
                         </div>
                       </div>
@@ -129,7 +128,7 @@ export default function HomePage() {
                   </CardContent>
                 </Card>
 
-                <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-all border-slate-200">
+                <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300">
                   <CardContent className="p-0">
                     <div className="relative w-full bg-slate-900" style={{ paddingBottom: "56.25%" }}>
                       <iframe
@@ -140,13 +139,13 @@ export default function HomePage() {
                         title="Exit Scam Prevention"
                       />
                     </div>
-                    <div className="p-4 bg-white">
-                      <h3 className="font-semibold text-slate-900 mb-2">Exit Scam - ¥12.5M Protected</h3>
+                    <div className="p-6 bg-card">
+                      <h3 className="font-serif text-lg font-semibold text-foreground mb-3">Exit Scam - ¥12.5M Protected</h3>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-slate-600">Japan 🇯🇵</span>
-                        <div className="flex gap-1">
+                        <span className="text-sm text-muted-foreground">Japan 🇯🇵</span>
+                        <div className="flex gap-0.5">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                            <Star key={i} className="h-4 w-4 fill-accent text-accent" />
                           ))}
                         </div>
                       </div>
@@ -156,19 +155,19 @@ export default function HomePage() {
               </div>
 
               {/* CTA to Reviews Page */}
-              <div className="text-center bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl p-8 border border-blue-100">
+              <div className="text-center bg-muted rounded-2xl p-10 border border-border">
                 <div className="flex items-center justify-center gap-2 mb-4">
                   <CheckCircle className="h-6 w-6 text-green-600" />
-                  <span className="text-sm font-medium text-slate-700">All testimonials verified • 2,400+ successful cases</span>
+                  <span className="text-sm font-semibold text-muted-foreground">All testimonials verified • 2,400+ successful cases</span>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                  See More Success Stories
+                <h3 className="font-serif text-3xl font-bold text-foreground mb-4">
+                  Explore More Success Stories
                 </h3>
-                <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-                  Watch extended video interviews and read detailed written testimonials from clients across 78 countries who recovered their stolen crypto.
+                <p className="text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+                  Watch extended video interviews and read detailed testimonials from clients across 78 countries who recovered their stolen cryptocurrency.
                 </p>
-                <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  <Link href="/reviews">View All Reviews & Video Testimonials</Link>
+                <Button asChild size="lg" variant="gold">
+                  <Link href="/reviews">View All Testimonials</Link>
                 </Button>
               </div>
             </div>

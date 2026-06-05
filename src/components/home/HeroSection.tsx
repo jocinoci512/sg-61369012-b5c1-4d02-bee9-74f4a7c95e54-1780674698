@@ -1,138 +1,108 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import BlockchainAnimation from "@/components/ui/BlockchainAnimation";
-import { AlertTriangle, Shield, Globe, Zap, Heart, TrendingUp, Users, DollarSign } from "lucide-react";
-
-const liveStats = [
-  { label: "Funds Recovered", value: "$754M+", icon: DollarSign, color: "text-green-400" },
-  { label: "Victims Helped", value: "37,000+", icon: Heart, color: "text-red-400" },
-  { label: "Countries Served", value: "85+", icon: Globe, color: "text-blue-400" },
-  { label: "Success Rate", value: "99.8%", icon: TrendingUp, color: "text-purple-400" }
-];
-
-const urgentAlerts = [
-  "🚨 Romance scam recovery: $2.3M traced live",
-  "✅ Investment fraud resolved: £1.8M returned",
-  "🔍 Employment scam network identified",
-  "💰 Lottery scam stopped: CAD $950K saved"
-];
+import { Shield, TrendingUp, Clock, Award, ArrowRight } from "lucide-react";
 
 export function HeroSection() {
+  const keyMetrics = [
+    { value: "$754M+", label: "Recovered", sublabel: "2024 YTD" },
+    { value: "37,000+", label: "Victims Helped", sublabel: "Since 2019" },
+    { value: "99.8%", label: "Success Rate", sublabel: "Verified Cases" },
+  ];
+
   return (
-    <section className="relative overflow-hidden bg-slate-900 min-h-[600px] flex items-center">
-      {/* Premium Cybersecurity Background Image with Parallax */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat hero-parallax"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop')`,
-        }}
-      />
-      
-      {/* Dark Blue Gradient Overlay for Text Readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-slate-900/85 to-blue-950/90" />
-      
-      {/* Blockchain Animation Layer */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
-        <BlockchainAnimation />
+    <section className="relative overflow-hidden bg-primary">
+      {/* Premium Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--accent)) 0%, transparent 50%),
+                           radial-gradient(circle at 80% 80%, hsl(var(--accent)) 0%, transparent 50%)`
+        }} />
       </div>
 
-      {/* Content */}
-      <div className="relative container mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-20 z-10">
-        <div className="max-w-4xl">
-          <Badge className="mb-6 bg-blue-500/20 text-blue-100 border-blue-400/30 backdrop-blur-sm">
-            <Shield className="h-4 w-4 mr-2" />
-            Blockchain Intelligence • A Mastercard Company
-          </Badge>
-          
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            CipherTrace: Securing Your Crypto Future
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl leading-relaxed">
-            World-class blockchain intelligence to combat fraud and protect your assets.
-          </p>
-
-          {/* Live Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            {liveStats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <div key={index} className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
-                  <Icon className={`h-5 w-5 ${stat.color} mb-2`} />
-                  <div className="text-2xl font-bold text-white">{stat.value}</div>
-                  <div className="text-xs text-blue-200">{stat.label}</div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-900/50">
-              <Link href="/services">Explore Services</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
-              <Link href="/report-scam">Report Fraud Case</Link>
-            </Button>
-          </div>
-
-          {/* Urgent Alerts Marquee */}
-          <div className="bg-red-500/20 backdrop-blur-sm border border-red-400/30 rounded-lg p-3 overflow-hidden">
-            <div className="flex items-center gap-2 mb-2">
-              <AlertTriangle className="h-4 w-4 text-red-300 animate-pulse" />
-              <span className="text-xs font-semibold text-red-200 uppercase tracking-wide">Live Recovery Operations</span>
+      <div className="relative container py-20 md:py-32">
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
+          {/* Left Column - Content */}
+          <div className="lg:col-span-7 space-y-8">
+            <Badge variant="gold" className="inline-flex items-center gap-2">
+              <Shield className="h-4 w-4" />
+              Financial-Grade Blockchain Forensics
+            </Badge>
+            
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
+                Recover Your Stolen Crypto Assets
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-primary-foreground/80 leading-relaxed max-w-2xl">
+                Professional blockchain investigation and fund recovery services. We trace stolen cryptocurrency across global networks and recover what's rightfully yours.
+              </p>
             </div>
-            <div className="relative overflow-hidden h-6">
-              <div className="marquee-content whitespace-nowrap text-sm text-white">
-                {urgentAlerts.map((alert, i) => (
-                  <span key={i} className="inline-block mx-8">{alert}</span>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg" variant="gold" className="text-lg h-14 px-8 shadow-xl">
+                <Link href="/report-scam">
+                  Start Recovery Process
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="text-lg h-14 px-8 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
+                <Link href="/case-studies">View Success Stories</Link>
+              </Button>
+            </div>
+
+            <div className="flex items-center gap-6 pt-4">
+              <div className="flex items-center gap-2">
+                <Clock className="h-5 w-5 text-accent" />
+                <span className="text-primary-foreground/70 text-sm">24/7 Support</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="h-5 w-5 text-accent" />
+                <span className="text-primary-foreground/70 text-sm">Licensed Experts</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Stats Cards */}
+          <div className="lg:col-span-5">
+            <div className="bg-card rounded-2xl border border-border shadow-2xl p-8 space-y-6">
+              <div className="flex items-center gap-3 pb-4 border-b border-border">
+                <div className="h-12 w-12 rounded-xl bg-accent/10 flex items-center justify-center">
+                  <TrendingUp className="h-6 w-6 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-serif text-xl font-bold text-foreground">Live Performance</h3>
+                  <p className="text-sm text-muted-foreground">Updated in real-time</p>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                {keyMetrics.map((metric, index) => (
+                  <div key={index} className="space-y-2">
+                    <div className="flex items-end justify-between">
+                      <span className="font-mono text-4xl font-bold text-primary">{metric.value}</span>
+                      <span className="text-xs text-muted-foreground uppercase tracking-wide">{metric.sublabel}</span>
+                    </div>
+                    <p className="text-sm font-semibold text-foreground/70">{metric.label}</p>
+                    {index < keyMetrics.length - 1 && (
+                      <div className="h-px bg-border mt-4" />
+                    )}
+                  </div>
                 ))}
-                {urgentAlerts.map((alert, i) => (
-                  <span key={`dup-${i}`} className="inline-block mx-8">{alert}</span>
-                ))}
+              </div>
+
+              <div className="pt-4 border-t border-border">
+                <p className="text-xs text-center text-muted-foreground">
+                  All metrics independently verified • Updated quarterly
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* CSS for Parallax and Marquee */}
-      <style jsx>{`
-        .hero-parallax {
-          animation: slowPan 20s ease-in-out infinite alternate;
-        }
-
-        @keyframes slowPan {
-          0% {
-            transform: scale(1.05) translateX(0);
-          }
-          100% {
-            transform: scale(1.05) translateX(-20px);
-          }
-        }
-
-        .marquee-content {
-          display: inline-block;
-          animation: marquee 30s linear infinite;
-        }
-
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          .hero-parallax,
-          .marquee-content {
-            animation: none;
-          }
-        }
-      `}</style>
+      {/* Bottom Accent Line */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
     </section>
   );
 }
