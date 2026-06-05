@@ -13,9 +13,9 @@ position: 0
 Establish Trust & Authority design system foundation — deep navy + gold palette, premium serif headings, professional sans body. Financial-grade precision aesthetic.
 
 ## Checklist
-- [ ] Update globals.css with Trust & Authority color tokens
-- [ ] Import Crimson Pro (headings) and Source Sans 3 (body) from Google Fonts
-- [ ] Register fonts in tailwind.config.ts
+- [x] Update globals.css with Trust & Authority color tokens
+- [x] Import Crimson Pro (headings) and Source Sans 3 (body) from Google Fonts
+- [x] Register fonts in tailwind.config.ts
 - [ ] Create custom badge variants (gold, navy)
 - [ ] Create premium button variants
 - [ ] Update card styling for elevated premium feel

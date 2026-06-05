@@ -9,6 +9,11 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			serif: ['Crimson Pro', 'Georgia', 'serif'],
+  			sans: ['Source Sans 3', 'system-ui', 'sans-serif'],
+  			mono: ['IBM Plex Mono', 'Courier New', 'monospace'],
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -43,6 +48,14 @@ const config: Config = {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
+  			navy: {
+  				DEFAULT: 'hsl(var(--navy))',
+  				dark: 'hsl(var(--navy-dark))',
+  			},
+  			gold: {
+  				DEFAULT: 'hsl(var(--gold))',
+  				light: 'hsl(var(--gold-light))',
+  			},
   			chart: {
   				'1': 'hsl(var(--chart-1))',
   				'2': 'hsl(var(--chart-2))',
