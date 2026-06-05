@@ -1,9 +1,9 @@
 ---
 title: Design System Setup
-status: in_progress
+status: done
 priority: urgent
 type: chore
-tags: [design, foundation]
+tags: [design-system, colors, fonts]
 created_by: agent
 created_at: 2026-06-05T09:16:39Z
 position: 0

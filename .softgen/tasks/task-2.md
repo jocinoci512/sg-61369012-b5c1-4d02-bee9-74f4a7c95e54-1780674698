@@ -1,6 +1,6 @@
 ---
 title: Modernize Homepage
-status: todo
+status: done
 priority: high
 type: feature
 tags: [homepage, hero, trust-signals]

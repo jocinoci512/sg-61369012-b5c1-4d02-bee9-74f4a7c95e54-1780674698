@@ -1,6 +1,6 @@
 ---
 title: Modernize Header & Footer
-status: todo
+status: done
 priority: high
 type: feature
 tags: [navigation, layout]
