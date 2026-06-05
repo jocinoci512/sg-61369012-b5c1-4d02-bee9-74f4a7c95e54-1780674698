@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Shield, TrendingUp, Clock, Award, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function HeroSection() {
   const keyMetrics = [
@@ -13,7 +14,7 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-[hsl(220,90%,20%)]">
       {/* Premium Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 animate-breathe">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--accent)) 0%, transparent 50%),
                            radial-gradient(circle at 80% 80%, hsl(var(--accent)) 0%, transparent 50%)`
@@ -23,8 +24,13 @@ export function HeroSection() {
       <div className="relative container py-20 md:py-32">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           {/* Left Column - Content */}
-          <div className="lg:col-span-7 space-y-8">
-            <Badge variant="gold" className="inline-flex items-center gap-2">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="lg:col-span-7 space-y-8"
+          >
+            <Badge variant="gold" className="inline-flex items-center gap-2 animate-float">
               <Shield className="h-4 w-4" />
               Financial-Grade Blockchain Forensics
             </Badge>
@@ -40,35 +46,50 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" variant="gold" className="text-lg h-14 px-8 shadow-xl">
+              <Button asChild size="lg" variant="gold" className="text-lg h-14 px-8 shadow-xl hover:scale-105 transition-transform">
                 <Link href="/report-scam">
                   Start Recovery Process
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-lg h-14 px-8 border-white/30 text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outline" className="text-lg h-14 px-8 border-white/30 text-white hover:bg-white/10 hover:scale-105 transition-transform">
                 <Link href="/case-studies">View Success Stories</Link>
               </Button>
             </div>
 
             <div className="flex items-center gap-6 pt-4">
-              <div className="flex items-center gap-2">
+              <motion.div 
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="flex items-center gap-2"
+              >
                 <Clock className="h-5 w-5 text-accent" />
                 <span className="text-white/80 text-sm">24/7 Support</span>
-              </div>
-              <div className="flex items-center gap-2">
+              </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="flex items-center gap-2"
+              >
                 <Award className="h-5 w-5 text-accent" />
                 <span className="text-white/80 text-sm">Licensed Experts</span>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column - Stats Cards */}
-          <div className="lg:col-span-5">
-            <div className="bg-card rounded-2xl border border-border shadow-2xl p-8 space-y-6">
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+            className="lg:col-span-5"
+          >
+            <div className="bg-card rounded-2xl border border-border shadow-2xl p-8 space-y-6 transform hover:-translate-y-2 transition-transform duration-500">
               <div className="flex items-center gap-3 pb-4 border-b border-border">
                 <div className="h-12 w-12 rounded-xl bg-accent/10 flex items-center justify-center">
-                  <TrendingUp className="h-6 w-6 text-accent" />
+                  <TrendingUp className="h-6 w-6 text-accent animate-pulse-slow" />
                 </div>
                 <div>
                   <h3 className="font-serif text-xl font-bold text-foreground">Live Performance</h3>
@@ -78,7 +99,13 @@ export function HeroSection() {
 
               <div className="space-y-6">
                 {keyMetrics.map((metric, index) => (
-                  <div key={index} className="space-y-2">
+                  <motion.div 
+                    key={index}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                    className="space-y-2"
+                  >
                     <div className="flex items-end justify-between">
                       <span className="font-mono text-4xl font-bold text-primary">{metric.value}</span>
                       <span className="text-xs text-muted-foreground uppercase tracking-wide">{metric.sublabel}</span>
@@ -87,7 +114,7 @@ export function HeroSection() {
                     {index < keyMetrics.length - 1 && (
                       <div className="h-px bg-border mt-4" />
                     )}
-                  </div>
+                  </motion.div>
                 ))}
               </div>
 
@@ -97,7 +124,7 @@ export function HeroSection() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
