@@ -96,27 +96,32 @@ export default function AboutPage() {
 
         <main>
           {/* Hero Section */}
-          <section className="relative py-20 md:py-28 bg-primary overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-navy-dark opacity-95" />
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent rounded-full blur-3xl" />
-              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gold-light rounded-full blur-3xl" />
+          <section className="relative overflow-hidden bg-[hsl(220,90%,20%)]">
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--accent)) 0%, transparent 50%),
+                                 radial-gradient(circle at 80% 80%, hsl(var(--accent)) 0%, transparent 50%)`
+              }} />
             </div>
-            
-            <div className="container relative z-10">
-              <div className="max-w-4xl mx-auto text-center">
-                <Badge variant="gold" className="mb-6">
-                  <Shield className="h-3 w-3 mr-1" />
-                  Established 2018
+
+            <div className="relative container py-20 md:py-28">
+              <div className="max-w-4xl mx-auto text-center space-y-6">
+                <Badge variant="gold" className="inline-flex items-center gap-2">
+                  <Shield className="h-4 w-4" />
+                  Trusted Since 2019
                 </Badge>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                  Financial-Grade Crypto Recovery Experts
+                
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  Leading Blockchain Forensics Experts
                 </h1>
-                <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-                  Founded by former FBI cyber investigators, we've recovered $754M+ in stolen cryptocurrency for 37,000+ victims across 78 countries through rigorous blockchain forensics and legal coordination.
+                
+                <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+                  We combine cutting-edge technology with financial investigation expertise to recover stolen cryptocurrency and bring justice to victims of fraud.
                 </p>
               </div>
             </div>
+
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
           </section>
 
           {/* Mission & Values */}

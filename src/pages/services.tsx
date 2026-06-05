@@ -6,7 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { ShieldCheck, SearchCode, AlertTriangle, Eye, Zap, Briefcase, CheckSquare, Network } from "lucide-react";
+import { ShieldCheck, SearchCode, AlertTriangle, Eye, Zap, Briefcase, CheckSquare, Network, Shield } from "lucide-react";
 
 export default function ServicesPage() {
   const services = [
@@ -85,16 +85,41 @@ export default function ServicesPage() {
 
         <main>
           {/* Hero Section */}
-          <section className="py-20 bg-blue-700 text-white">
-            <div className="container mx-auto max-w-7xl px-4 md:px-6 lg:px-8 text-center">
-              <Badge variant="secondary" className="mb-4 bg-white/20 text-white border-white/30">Our Services</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Securing the Crypto Economy, Together
-              </h1>
-              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-                CipherTracers provides a comprehensive suite of industry-leading solutions to protect your digital assets and ensure compliance.
-              </p>
+          <section className="relative overflow-hidden bg-[hsl(220,90%,20%)]">
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--accent)) 0%, transparent 50%),
+                                 radial-gradient(circle at 80% 80%, hsl(var(--accent)) 0%, transparent 50%)`
+              }} />
             </div>
+
+            <div className="relative container py-20 md:py-28">
+              <div className="max-w-4xl mx-auto text-center space-y-6">
+                <Badge variant="gold" className="inline-flex items-center gap-2">
+                  <Shield className="h-4 w-4" />
+                  Professional Recovery Services
+                </Badge>
+                
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  Comprehensive Crypto Recovery Solutions
+                </h1>
+                
+                <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+                  From blockchain forensics to legal support, our team provides end-to-end cryptocurrency recovery services backed by years of expertise.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                  <Button asChild size="lg" variant="gold" className="text-lg h-14 px-8">
+                    <Link href="/report-scam">Start Your Case</Link>
+                  </Button>
+                  <Button asChild size="lg" variant="outline" className="text-lg h-14 px-8 border-white/30 text-white hover:bg-white/10">
+                    <Link href="/case-studies">View Case Studies</Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
           </section>
 
           {/* Services Grid/Accordion Section */}

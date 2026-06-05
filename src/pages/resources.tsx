@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { Rss, Download, Mail, BookOpen, FileText } from "lucide-react";
+import { Rss, Download, Mail, BookOpen, FileText, Shield } from "lucide-react";
 
 // Placeholder data for blog posts and guides
 const blogPosts = [
@@ -70,16 +70,32 @@ export default function ResourcesPage() {
 
         <main>
           {/* Hero Section */}
-          <section className="py-20 bg-blue-700 text-white">
-            <div className="container mx-auto max-w-7xl px-4 md:px-6 lg:px-8 text-center">
-              <Badge variant="secondary" className="mb-4 bg-white/20 text-white border-white/30">Resources</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Knowledge is Power in Crypto
-              </h1>
-              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-                Explore our curated resources to stay ahead in the evolving world of digital assets and blockchain security.
-              </p>
+          <section className="relative overflow-hidden bg-[hsl(220,90%,20%)]">
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--accent)) 0%, transparent 50%),
+                                 radial-gradient(circle at 80% 80%, hsl(var(--accent)) 0%, transparent 50%)`
+              }} />
             </div>
+
+            <div className="relative container py-20 md:py-28">
+              <div className="max-w-4xl mx-auto text-center space-y-6">
+                <Badge variant="gold" className="inline-flex items-center gap-2">
+                  <Shield className="h-4 w-4" />
+                  Knowledge Center
+                </Badge>
+                
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  Crypto Security Resources
+                </h1>
+                
+                <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+                  Expert guides, educational content, and tools to help you stay safe in the cryptocurrency ecosystem and understand blockchain security.
+                </p>
+              </div>
+            </div>
+
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
           </section>
 
           {/* Blog Section */}

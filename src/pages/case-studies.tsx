@@ -158,39 +158,49 @@ export default function CaseStudiesPage() {
 
         <main>
           {/* Hero Section */}
-          <section className="relative py-16 md:py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white overflow-hidden">
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+          <section className="relative overflow-hidden bg-[hsl(220,90%,20%)]">
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--accent)) 0%, transparent 50%),
+                                 radial-gradient(circle at 80% 80%, hsl(var(--accent)) 0%, transparent 50%)`
+              }} />
             </div>
-            <div className="container mx-auto max-w-7xl px-4 md:px-6 lg:px-8 relative z-10">
-              <div className="text-center max-w-4xl mx-auto">
-                <Badge className="mb-4 bg-white/20 text-white border-white/30">
-                  <Shield className="h-4 w-4 mr-1" />
-                  Real Recovery Data
+
+            <div className="relative container py-20 md:py-28">
+              <div className="max-w-4xl mx-auto text-center space-y-6">
+                <Badge variant="gold" className="inline-flex items-center gap-2">
+                  <Shield className="h-4 w-4" />
+                  Real Recovery Stories
                 </Badge>
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  Case Studies: How We Recover Stolen Crypto
+                
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  Proven Success in Crypto Recovery
                 </h1>
-                <p className="text-xl text-blue-100 mb-8">
-                  Detailed breakdowns of actual recovery operations with forensic analysis, timelines, and outcomes. See how our blockchain intelligence traces funds across exchanges and borders.
+                
+                <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+                  Real cases, real results. See how we've helped victims recover millions in stolen cryptocurrency through professional blockchain forensics.
                 </p>
-                <div className="flex flex-wrap items-center justify-center gap-8 text-sm">
-                  <div className="flex items-center gap-2">
-                    <DollarSign className="h-5 w-5" />
-                    <span>$384K+ Recovered in These Cases</span>
+
+                <div className="flex items-center justify-center gap-8 pt-6">
+                  <div className="text-center">
+                    <div className="font-mono text-3xl font-bold text-white">$754M+</div>
+                    <div className="text-sm text-white/80">Total Recovered</div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="h-5 w-5" />
-                    <span>Avg 49 Days to Recovery</span>
+                  <div className="h-12 w-px bg-white/20" />
+                  <div className="text-center">
+                    <div className="font-mono text-3xl font-bold text-white">37,000+</div>
+                    <div className="text-sm text-white/80">Cases Solved</div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <TrendingUp className="h-5 w-5" />
-                    <span>93% Average Recovery Rate</span>
+                  <div className="h-12 w-px bg-white/20" />
+                  <div className="text-center">
+                    <div className="font-mono text-3xl font-bold text-white">99.8%</div>
+                    <div className="text-sm text-white/80">Success Rate</div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
           </section>
 
           {/* Case Studies Section */}

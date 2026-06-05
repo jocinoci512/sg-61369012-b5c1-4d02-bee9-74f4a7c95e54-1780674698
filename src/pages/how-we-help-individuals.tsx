@@ -195,26 +195,32 @@ export default function HowWeHelpIndividualsPage() {
 
         <main>
           {/* Hero Section */}
-          <section className="py-20 bg-gradient-to-r from-blue-700 to-blue-900 text-white">
-            <div className="container mx-auto max-w-7xl px-4 md:px-6 lg:px-8 text-center">
-              <Badge variant="secondary" className="mb-4 bg-white/20 text-white border-white/30">
-                Fund Recovery Services
-              </Badge>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Recover Your Stolen Funds
-              </h1>
-              <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
-                CipherTrace specializes in helping individuals recover funds lost to cryptocurrency scams, romance fraud, investment schemes, and other financial crimes. Our advanced blockchain forensics have recovered over $2.8 billion for victims worldwide.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-4 text-lg">
-                  Start Recovery Process
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-4 text-lg">
-                  Free Consultation
-                </Button>
+          <section className="relative overflow-hidden bg-[hsl(220,90%,20%)]">
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--accent)) 0%, transparent 50%),
+                                 radial-gradient(circle at 80% 80%, hsl(var(--accent)) 0%, transparent 50%)`
+              }} />
+            </div>
+
+            <div className="relative container py-20 md:py-28">
+              <div className="max-w-4xl mx-auto text-center space-y-6">
+                <Badge variant="gold" className="inline-flex items-center gap-2">
+                  <Shield className="h-4 w-4" />
+                  Individual Recovery Services
+                </Badge>
+                
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  We Help Individuals Recover Stolen Crypto
+                </h1>
+                
+                <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+                  Specialized recovery services for individuals who have lost cryptocurrency to scams, hacks, or fraudulent platforms.
+                </p>
               </div>
             </div>
+
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
           </section>
 
           {/* Global Recovery Stats */}

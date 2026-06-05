@@ -131,43 +131,28 @@ export default function TeamsPage() {
         
         <main>
           {/* Hero Section */}
-          <section className="relative py-20 md:py-28 bg-primary text-primary-foreground overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary via-navy-dark to-primary opacity-90" />
-            <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 20% 50%, rgba(218, 165, 32, 0.1) 0%, transparent 50%),
-                                radial-gradient(circle at 80% 80%, rgba(218, 165, 32, 0.1) 0%, transparent 50%)`
-            }} />
-            
-            <div className="container relative z-10">
-              <div className="max-w-4xl mx-auto text-center">
-                <Badge variant="gold" className="mb-6 text-sm px-4 py-2">
-                  <Users className="h-4 w-4 mr-2" />
-                  World-Class Expertise
+          <section className="relative overflow-hidden bg-[hsl(220,90%,20%)]">
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--accent)) 0%, transparent 50%),
+                                 radial-gradient(circle at 80% 80%, hsl(var(--accent)) 0%, transparent 50%)`
+              }} />
+            </div>
+
+            <div className="relative container py-20 md:py-28">
+              <div className="max-w-4xl mx-auto text-center space-y-6">
+                <Badge variant="gold" className="inline-flex items-center gap-2">
+                  <Shield className="h-4 w-4" />
+                  Meet Our Experts
                 </Badge>
                 
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
-                  Meet the Team Behind<br />
-                  <span className="text-accent">$754M+ Recovered</span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  World-Class Recovery Team
                 </h1>
                 
-                <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
-                  Licensed investigators, blockchain forensics experts, and legal professionals dedicated to recovering your stolen cryptocurrency.
+                <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+                  Our team combines blockchain forensics expertise, legal knowledge, and financial investigation experience to deliver results.
                 </p>
-
-                <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto mt-12">
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-accent mb-2">65+</div>
-                    <div className="text-sm text-primary-foreground/80">Years Combined Experience</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-accent mb-2">37K+</div>
-                    <div className="text-sm text-primary-foreground/80">Cases Completed</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-accent mb-2">18</div>
-                    <div className="text-sm text-primary-foreground/80">Languages Supported</div>
-                  </div>
-                </div>
               </div>
             </div>
 

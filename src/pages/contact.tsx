@@ -130,34 +130,58 @@ Submitted: ${new Date().toLocaleString()}
 
         <main>
           {/* Hero Section */}
-          <section className="relative py-24 md:py-32 bg-primary text-primary-foreground overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.05),transparent_50%)]" />
-            <div className="container relative">
-              <div className="max-w-3xl mx-auto text-center">
-                <Badge variant="gold" className="mb-6">
-                  <Phone className="h-3 w-3 mr-1" />
-                  24/7 Available
+          <section className="relative overflow-hidden bg-[hsl(220,90%,20%)]">
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--accent)) 0%, transparent 50%),
+                                 radial-gradient(circle at 80% 80%, hsl(var(--accent)) 0%, transparent 50%)`
+              }} />
+            </div>
+
+            <div className="relative container py-20 md:py-28">
+              <div className="max-w-4xl mx-auto text-center space-y-6">
+                <Badge variant="gold" className="inline-flex items-center gap-2">
+                  <Phone className="h-4 w-4" />
+                  24/7 Emergency Support
                 </Badge>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                  Get Expert Assistance
+                
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  Get Help Immediately
                 </h1>
-                <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
-                  Our blockchain forensics team is ready to help you recover stolen cryptocurrency and investigate fraud cases.
+                
+                <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+                  Our fraud recovery specialists are available 24/7 to assist with urgent cases. Call, text, or message us on WhatsApp now.
                 </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <div className="flex items-center gap-2 text-primary-foreground/90">
-                    <Shield className="h-5 w-5 text-accent" />
-                    <span className="font-semibold">Licensed Investigators</span>
+
+                <Card className="inline-flex items-center gap-4 p-6 bg-card/95 backdrop-blur-sm border-accent/20 max-w-md mx-auto">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-xl bg-accent/10">
+                    <Phone className="h-6 w-6 text-accent" />
                   </div>
-                  <div className="hidden sm:block w-px h-6 bg-primary-foreground/20" />
-                  <div className="flex items-center gap-2 text-primary-foreground/90">
-                    <Clock className="h-5 w-5 text-accent" />
-                    <span className="font-semibold">1-Hour Response</span>
+                  <div className="text-left">
+                    <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wide">Emergency Hotline</p>
+                    <div className="flex items-center gap-2">
+                      <a href="tel:+13435042112" className="font-mono text-2xl font-bold text-primary hover:text-primary/80 transition-colors">
+                        +1 343 504 2112
+                      </a>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="h-8 w-8"
+                        onClick={copyPhone}
+                      >
+                        {copiedPhone ? (
+                          <Check className="h-4 w-4 text-green-600" />
+                        ) : (
+                          <Copy className="h-4 w-4 text-muted-foreground" />
+                        )}
+                      </Button>
+                    </div>
                   </div>
-                </div>
+                </Card>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent" />
+
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
           </section>
 
           {/* 24/7 Contact Banner */}

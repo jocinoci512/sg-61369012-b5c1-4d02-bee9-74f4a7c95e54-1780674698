@@ -4,7 +4,7 @@ import Footer from "@/components/layout/Footer";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { TrendingUp, Clock, MapPin, DollarSign, CheckCircle, Award, Users, Target, BarChart3, Globe } from "lucide-react";
+import { TrendingUp, Clock, MapPin, DollarSign, CheckCircle, Award, Users, Target, BarChart3, Globe, Shield } from "lucide-react";
 import Link from "next/link";
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
@@ -112,50 +112,32 @@ export default function SuccessStoriesPage() {
 
         <main>
           {/* Hero Section */}
-          <section className="relative py-20 md:py-28 bg-primary overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-navy-dark opacity-95" />
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent rounded-full blur-3xl" />
-              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gold-light rounded-full blur-3xl" />
+          <section className="relative overflow-hidden bg-[hsl(220,90%,20%)]">
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--accent)) 0%, transparent 50%),
+                                 radial-gradient(circle at 80% 80%, hsl(var(--accent)) 0%, transparent 50%)`
+              }} />
             </div>
-            
-            <div className="container relative z-10">
-              <div className="max-w-4xl mx-auto text-center">
-                <Badge variant="gold" className="mb-6">
-                  <Award className="h-3 w-3 mr-1" />
-                  Verified Case Studies
-                </Badge>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                  Real Recovery Success Stories
-                </h1>
-                <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-                  Detailed case studies documenting our blockchain forensics investigations, recovery outcomes, and client experiences across diverse fraud scenarios.
-                </p>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                    <DollarSign className="h-8 w-8 text-accent mb-3 mx-auto" />
-                    <div className="text-3xl font-bold text-white mb-1">$754M+</div>
-                    <div className="text-sm text-blue-200">Total Recovered</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                    <Users className="h-8 w-8 text-accent mb-3 mx-auto" />
-                    <div className="text-3xl font-bold text-white mb-1">37,000+</div>
-                    <div className="text-sm text-blue-200">Cases Handled</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                    <Target className="h-8 w-8 text-accent mb-3 mx-auto" />
-                    <div className="text-3xl font-bold text-white mb-1">99.8%</div>
-                    <div className="text-sm text-blue-200">Success Rate</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                    <Globe className="h-8 w-8 text-accent mb-3 mx-auto" />
-                    <div className="text-3xl font-bold text-white mb-1">78</div>
-                    <div className="text-sm text-blue-200">Countries</div>
-                  </div>
-                </div>
+            <div className="relative container py-20 md:py-28">
+              <div className="max-w-4xl mx-auto text-center space-y-6">
+                <Badge variant="gold" className="inline-flex items-center gap-2">
+                  <Shield className="h-4 w-4" />
+                  Recovery Success Stories
+                </Badge>
+                
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  Millions Recovered for Our Clients
+                </h1>
+                
+                <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+                  Real stories of victims who recovered their stolen cryptocurrency through our professional blockchain forensics and legal support.
+                </p>
               </div>
             </div>
+
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
           </section>
 
           {/* Featured Case Studies */}

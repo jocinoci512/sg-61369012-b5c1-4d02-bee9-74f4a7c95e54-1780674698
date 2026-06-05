@@ -163,44 +163,43 @@ export default function TestimonialsPage() {
         
         <main>
           {/* Hero Section */}
-          <section className="relative py-20 md:py-28 bg-primary text-primary-foreground overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary via-navy-dark to-primary opacity-90" />
-            <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 20% 50%, rgba(218, 165, 32, 0.1) 0%, transparent 50%),
-                                radial-gradient(circle at 80% 80%, rgba(218, 165, 32, 0.1) 0%, transparent 50%)`
-            }} />
-            
-            <div className="container relative z-10">
-              <div className="max-w-4xl mx-auto text-center">
-                <Badge variant="gold" className="mb-6 text-sm px-4 py-2">
-                  <Star className="h-4 w-4 mr-2" />
-                  2,400+ Verified Testimonials
+          <section className="relative overflow-hidden bg-[hsl(220,90%,20%)]">
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--accent)) 0%, transparent 50%),
+                                 radial-gradient(circle at 80% 80%, hsl(var(--accent)) 0%, transparent 50%)`
+              }} />
+            </div>
+
+            <div className="relative container py-20 md:py-28">
+              <div className="max-w-4xl mx-auto text-center space-y-6">
+                <Badge variant="gold" className="inline-flex items-center gap-2">
+                  <Star className="h-4 w-4" />
+                  Verified Client Reviews
                 </Badge>
                 
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
-                  Real Stories of<br />
-                  <span className="text-accent">Successful Recovery</span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  Real Stories from Real People
                 </h1>
                 
-                <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
-                  Watch video testimonials and read detailed reviews from clients across 78 countries who recovered their stolen cryptocurrency.
+                <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+                  Don't just take our word for it. Hear from clients who successfully recovered their stolen crypto assets with our help.
                 </p>
 
-                <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto mt-12">
+                <div className="flex items-center justify-center gap-8 pt-6">
                   <div className="text-center">
-                    <div className="flex items-center justify-center gap-1 mb-2">
-                      <span className="text-4xl font-bold text-accent">4.9</span>
-                      <Star className="h-6 w-6 fill-accent text-accent" />
-                    </div>
-                    <div className="text-sm text-primary-foreground/80">Average Rating</div>
+                    <div className="font-mono text-3xl font-bold text-white">4.9/5</div>
+                    <div className="text-sm text-white/80">Average Rating</div>
                   </div>
+                  <div className="h-12 w-px bg-white/20" />
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-accent mb-2">2,400+</div>
-                    <div className="text-sm text-primary-foreground/80">Total Reviews</div>
+                    <div className="font-mono text-3xl font-bold text-white">2,400+</div>
+                    <div className="text-sm text-white/80">Verified Reviews</div>
                   </div>
+                  <div className="h-12 w-px bg-white/20" />
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-accent mb-2">78</div>
-                    <div className="text-sm text-primary-foreground/80">Countries</div>
+                    <div className="font-mono text-3xl font-bold text-white">48</div>
+                    <div className="text-sm text-white/80">Countries</div>
                   </div>
                 </div>
               </div>

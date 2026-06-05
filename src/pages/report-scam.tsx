@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { AlertCircle, CheckCircle2, ArrowLeft, ArrowRight, ShieldCheck, FileText, Database, Send, Save, MessageCircle, Copy, Check } from "lucide-react";
+import { AlertCircle, CheckCircle2, ArrowLeft, ArrowRight, ShieldCheck, FileText, Database, Send, Save, MessageCircle, Copy, Check, Clock, Award } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const FRAUD_TYPES = [
@@ -322,63 +322,43 @@ Reference ID: ${newReferenceId}
           )}
 
           {/* Hero Section */}
-          <section className="relative py-16 md:py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
-            <div className="container mx-auto max-w-5xl px-4 md:px-6 lg:px-8">
-              <div className="text-center">
-                <Badge className="mb-4 bg-white/20 text-white border-white/30">
-                  <ShieldCheck className="h-4 w-4 mr-1" />
-                  Secure Submission
-                </Badge>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                  Report a Crypto Scam
-                </h1>
-                <p className="text-xl text-blue-100 mb-6 max-w-3xl mx-auto">
-                  Submit your fraud case details securely. Our blockchain forensics team will review your case and contact you within 24-48 hours.
-                </p>
-                <div className="flex items-center justify-center gap-4 text-sm">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4" />
-                    <span>100% Confidential</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4" />
-                    <span>No Upfront Fees</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4" />
-                    <span>Auto-Saved Progress</span>
-                  </div>
-                </div>
+          <section className="relative overflow-hidden bg-[hsl(220,90%,20%)]">
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--accent)) 0%, transparent 50%),
+                                 radial-gradient(circle at 80% 80%, hsl(var(--accent)) 0%, transparent 50%)`
+              }} />
+            </div>
 
-                {/* WhatsApp Contact Button */}
-                <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-blue-50 min-w-[200px]">
-                    <Link href="#form">Report Fraud Case</Link>
-                  </Button>
-                  <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10 min-w-[200px]">
-                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                      <MessageCircle className="mr-2 h-5 w-5" />
-                      Chat on WhatsApp
-                    </a>
-                  </Button>
-                </div>
-                <p className="text-sm text-blue-200 mt-4">
-                  📱 Contact us: WhatsApp • iMessage • SMS • Call: 
-                  <span className="inline-flex items-center gap-1 ml-1">
-                    <a href={telUrl} className="text-white font-semibold hover:text-blue-100 transition-colors">
-                      +1 (343) 504-2112
-                    </a>
-                    <button
-                      onClick={copyPhone}
-                      className="p-1 hover:bg-white/10 rounded transition-colors text-white"
-                      aria-label="Copy phone number"
-                    >
-                      {copiedPhone ? <Check className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
-                    </button>
-                  </span>
+            <div className="relative container py-16 md:py-20">
+              <div className="max-w-4xl mx-auto text-center space-y-6">
+                <Badge variant="gold" className="inline-flex items-center gap-2">
+                  <Shield className="h-4 w-4" />
+                  Secure Case Submission
+                </Badge>
+                
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                  Report Your Crypto Fraud Case
+                </h1>
+                
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
+                  Complete this secure form to begin your recovery process. Our team will review your case and respond within 24-48 hours.
                 </p>
+
+                <div className="flex items-center justify-center gap-6 pt-4">
+                  <div className="flex items-center gap-2">
+                    <Clock className="h-5 w-5 text-accent" />
+                    <span className="text-white/80 text-sm">24/7 Support Available</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Award className="h-5 w-5 text-accent" />
+                    <span className="text-white/80 text-sm">No Upfront Fees</span>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
           </section>
 
           {/* Form Section */}
