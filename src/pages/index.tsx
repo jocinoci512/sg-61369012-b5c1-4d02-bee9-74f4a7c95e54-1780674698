@@ -1,14 +1,13 @@
 import Head from "next/head";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { HeroSection } from "@/components/home/HeroSection";
+import HeroSection from "@/components/home/HeroSection";
 import TrustSignals from "@/components/home/TrustSignals";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import HowWeHelp from "@/components/home/HowWeHelp";
-import BlogPreview from "@/components/home/BlogPreview";
+import { FAQSection } from "@/components/home/FAQSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
-import SuccessStories from "@/components/home/SuccessStories";
-import Link from "next/link";
+import BlogPreview from "@/components/home/BlogPreview";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
