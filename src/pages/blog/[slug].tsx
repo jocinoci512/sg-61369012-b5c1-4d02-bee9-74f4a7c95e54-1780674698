@@ -57,7 +57,7 @@ export default function BlogPostPage({ post, exists }: BlogPostProps) {
         <link rel="canonical" href={`https://ciphertracers.com/blog/${post.slug}`} />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
+      <div className="min-h-screen bg-background">
         <Header />
 
         <main className="py-12">
