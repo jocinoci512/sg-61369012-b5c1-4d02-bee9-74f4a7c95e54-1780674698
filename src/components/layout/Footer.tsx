@@ -1,10 +1,19 @@
 import Link from "next/link";
-import { Shield, Twitter, Linkedin, Mail, Phone, MessageCircle } from "lucide-react";
+import { Shield, Twitter, Linkedin, Mail, Phone, MessageCircle, Copy, Check } from "lucide-react";
+import { useState } from "react";
 
 export default function Footer() {
   const phoneNumber = "+1 (343) 504-2112";
+  const phoneNumberRaw = "+13435042112";
   const whatsappUrl = "https://wa.me/13435042112?text=Hello%2C%20I%20need%20help%20with%20crypto%20security.";
   const telUrl = "tel:+13435042112";
+  const [copied, setCopied] = useState(false);
+
+  const copyPhone = () => {
+    navigator.clipboard.writeText(phoneNumberRaw);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <footer className="bg-slate-900 text-white">
@@ -62,9 +71,18 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="bg-slate-800 p-3 rounded-lg border border-slate-700">
                 <p className="text-xs text-slate-400 mb-1">Call or Text Anytime</p>
-                <a href={telUrl} className="text-lg font-bold text-green-400 hover:text-green-300 transition-colors font-mono">
-                  {phoneNumber}
-                </a>
+                <div className="flex items-center gap-2">
+                  <a href={telUrl} className="text-lg font-bold text-green-400 hover:text-green-300 transition-colors font-mono">
+                    {phoneNumber}
+                  </a>
+                  <button
+                    onClick={copyPhone}
+                    className="p-1.5 hover:bg-slate-700 rounded transition-colors text-slate-400 hover:text-green-400"
+                    aria-label="Copy phone number"
+                  >
+                    {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                  </button>
+                </div>
               </div>
               <div className="space-y-2">
                 <a 

@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { Mail, MessageSquare, Send, Twitter, ExternalLink, AlertOctagon, Phone, MessageCircle, Smartphone } from "lucide-react";
+import { Mail, MessageSquare, Send, Twitter, ExternalLink, AlertOctagon, Phone, MessageCircle, Smartphone, Copy, Check } from "lucide-react";
 import { useState } from "react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertCircle, CheckCircle2 } from "lucide-react";
@@ -17,6 +17,7 @@ export default function ContactPage() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [copiedPhone, setCopiedPhone] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -106,6 +107,12 @@ Submitted: ${new Date().toLocaleString()}
   const smsUrl = `sms:${phoneNumber}`;
   const telUrl = `tel:${phoneNumber}`;
 
+  const copyPhone = () => {
+    navigator.clipboard.writeText(phoneNumber);
+    setCopiedPhone(true);
+    setTimeout(() => setCopiedPhone(false), 2000);
+  };
+
   return (
     <>
       <Head>
@@ -143,7 +150,18 @@ Submitted: ${new Date().toLocaleString()}
                 <div className="text-white text-center md:text-left">
                   <h2 className="text-2xl md:text-3xl font-bold mb-2">Need Immediate Assistance?</h2>
                   <p className="text-green-100 text-lg">Connect with us instantly via phone, WhatsApp, or message</p>
-                  <p className="text-white font-mono font-bold text-xl mt-2">{displayPhone}</p>
+                  <div className="flex items-center justify-center md:justify-start gap-2 mt-2">
+                    <a href={telUrl} className="text-white font-mono font-bold text-xl hover:text-green-100 transition-colors">
+                      {displayPhone}
+                    </a>
+                    <button
+                      onClick={copyPhone}
+                      className="p-2 hover:bg-white/10 rounded transition-colors text-white"
+                      aria-label="Copy phone number"
+                    >
+                      {copiedPhone ? <Check className="h-5 w-5" /> : <Copy className="h-5 w-5" />}
+                    </button>
+                  </div>
                 </div>
                 <div className="flex flex-wrap justify-center gap-3">
                   <Button asChild size="lg" className="bg-white text-green-700 hover:bg-green-50 min-w-[140px]">
@@ -239,9 +257,18 @@ Submitted: ${new Date().toLocaleString()}
                     <CardContent className="pt-6">
                       <div className="text-center mb-6">
                         <p className="text-sm font-medium text-slate-600 mb-2">24/7 Support Line</p>
-                        <a href={telUrl} className="text-3xl font-bold text-green-700 hover:text-green-800 font-mono">
-                          {displayPhone}
-                        </a>
+                        <div className="flex items-center justify-center gap-2">
+                          <a href={telUrl} className="text-3xl font-bold text-green-700 hover:text-green-800 font-mono">
+                            {displayPhone}
+                          </a>
+                          <button
+                            onClick={copyPhone}
+                            className="p-2 hover:bg-green-100 rounded transition-colors text-green-700"
+                            aria-label="Copy phone number"
+                          >
+                            {copiedPhone ? <Check className="h-6 w-6" /> : <Copy className="h-6 w-6" />}
+                          </button>
+                        </div>
                       </div>
                       
                       <div className="grid grid-cols-1 gap-3">

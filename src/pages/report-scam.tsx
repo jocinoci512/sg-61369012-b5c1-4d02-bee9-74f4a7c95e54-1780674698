@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { AlertCircle, CheckCircle2, ArrowLeft, ArrowRight, ShieldCheck, FileText, Database, Send, Save, MessageCircle, Copy } from "lucide-react";
+import { AlertCircle, CheckCircle2, ArrowLeft, ArrowRight, ShieldCheck, FileText, Database, Send, Save, MessageCircle, Copy, Check } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const FRAUD_TYPES = [
@@ -49,6 +49,7 @@ export default function ReportScamPage() {
   const [autoSaved, setAutoSaved] = useState(false);
   const [referenceId, setReferenceId] = useState("");
   const [copiedRef, setCopiedRef] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
 
   // Form data state
   const [formData, setFormData] = useState({
@@ -280,8 +281,15 @@ Reference ID: ${newReferenceId}
 
   // Contact URLs for different platforms
   const phoneNumber = "+13435042112";
+  const displayPhone = "+1 (343) 504-2112";
   const smsUrl = `sms:${phoneNumber}${referenceId ? `&body=${encodeURIComponent(`My reference ID is ${referenceId}`)}` : ''}`;
   const telUrl = `tel:${phoneNumber}`;
+
+  const copyPhone = () => {
+    navigator.clipboard.writeText(phoneNumber);
+    setCopiedPhone(true);
+    setTimeout(() => setCopiedPhone(false), 2000);
+  };
 
   return (
     <>
@@ -355,7 +363,19 @@ Reference ID: ${newReferenceId}
                   </Button>
                 </div>
                 <p className="text-sm text-blue-200 mt-4">
-                  📱 Contact us: WhatsApp • iMessage • SMS • Call: <strong className="text-white">+1 (343) 504-2112</strong>
+                  📱 Contact us: WhatsApp • iMessage • SMS • Call: 
+                  <span className="inline-flex items-center gap-1 ml-1">
+                    <a href={telUrl} className="text-white font-semibold hover:text-blue-100 transition-colors">
+                      +1 (343) 504-2112
+                    </a>
+                    <button
+                      onClick={copyPhone}
+                      className="p-1 hover:bg-white/10 rounded transition-colors text-white"
+                      aria-label="Copy phone number"
+                    >
+                      {copiedPhone ? <Check className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
+                    </button>
+                  </span>
                 </p>
               </div>
             </div>
@@ -787,7 +807,19 @@ Reference ID: ${newReferenceId}
                         </Button>
                       </div>
                       <p className="text-sm text-slate-600 text-center">
-                        Contact us directly at <strong>+1 (343) 504-2112</strong>
+                        Contact us directly at 
+                        <span className="inline-flex items-center gap-1 ml-1">
+                          <a href={telUrl} className="font-semibold text-slate-900 hover:text-green-600 transition-colors">
+                            +1 (343) 504-2112
+                          </a>
+                          <button
+                            onClick={copyPhone}
+                            className="p-1 hover:bg-slate-100 rounded transition-colors text-slate-600"
+                            aria-label="Copy phone number"
+                          >
+                            {copiedPhone ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                          </button>
+                        </span>
                       </p>
                     </div>
 
