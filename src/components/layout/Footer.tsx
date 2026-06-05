@@ -2,9 +2,9 @@ import Link from "next/link";
 import { Shield, Twitter, Linkedin, Mail, Phone, MessageCircle } from "lucide-react";
 
 export default function Footer() {
-  const phoneNumber = "+1 (940) 238-4915";
-  const whatsappUrl = "https://wa.me/19402384915?text=Hello%2C%20I%20need%20help%20with%20crypto%20security.";
-  const telUrl = "tel:+19402384915";
+  const phoneNumber = "+1 (343) 504-2112";
+  const whatsappUrl = "https://wa.me/13435042112?text=Hello%2C%20I%20need%20help%20with%20crypto%20security.";
+  const telUrl = "tel:+13435042112";
 
   return (
     <footer className="bg-slate-900 text-white">

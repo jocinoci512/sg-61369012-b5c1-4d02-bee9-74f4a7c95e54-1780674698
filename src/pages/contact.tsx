@@ -100,9 +100,9 @@ Submitted: ${new Date().toLocaleString()}
   };
 
   // Contact URLs
-  const phoneNumber = "+19402384915";
-  const displayPhone = "+1 (940) 238-4915";
-  const whatsappUrl = `https://wa.me/19402384915?text=${encodeURIComponent("Hello, I need help with crypto fraud case support.")}`;
+  const phoneNumber = "+13435042112";
+  const displayPhone = "+1 (343) 504-2112";
+  const whatsappUrl = `https://wa.me/13435042112?text=${encodeURIComponent("Hello, I need help with crypto fraud case support.")}`;
   const smsUrl = `sms:${phoneNumber}`;
   const telUrl = `tel:${phoneNumber}`;
 
