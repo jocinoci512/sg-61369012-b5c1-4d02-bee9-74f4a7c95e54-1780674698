@@ -13,10 +13,11 @@ position: 2
 Update global navigation and footer to match Trust & Authority design — restrained elegance, clear hierarchy, premium polish.
 
 ## Checklist
-- [ ] Redesign header with refined spacing and navy background
-- [ ] Add subtle gold underline on active nav items
-- [ ] Update footer with organized sections and premium typography
-- [ ] Style phone number with emphasis and copy button
+- [x] Redesign Header with premium serif logo, navy palette, gold CTA
+- [x] Add elevated styling with backdrop blur and subtle shadows
+- [x] Redesign Footer with multi-column layout and premium contact section
+- [x] Add gold accents and navy background
+- [x] Ensure phone number is prominent with copy functionality
 
 ## Acceptance
 - Navigation feels sophisticated, not generic

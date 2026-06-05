@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { Shield, Twitter, Linkedin, Mail, Phone, MessageCircle, Copy, Check } from "lucide-react";
+import { Shield, Mail, Phone, MessageCircle, Copy, Check, ExternalLink } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export default function Footer() {
   const phoneNumber = "+1 (343) 504-2112";
@@ -16,116 +18,143 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="container mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <Shield className="h-8 w-8 text-blue-400" />
-              <span className="text-xl font-bold">CipherTrace</span>
+    <footer className="bg-primary text-primary-foreground">
+      <div className="container py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-12">
+          <div className="lg:col-span-4 space-y-6">
+            <div className="flex items-center gap-3">
+              <Shield className="h-10 w-10 text-accent" />
+              <div className="flex flex-col">
+                <span className="font-serif text-2xl font-bold">CipherTrace</span>
+                <span className="text-xs text-primary-foreground/60 tracking-wide uppercase">Recovery Experts</span>
+              </div>
             </div>
-            <p className="text-slate-300 text-sm">
-              Securing the crypto economy through world-class blockchain intelligence and AML compliance solutions.
+            <p className="text-primary-foreground/80 text-sm leading-relaxed max-w-sm">
+              Professional blockchain forensics and fund recovery assistance. Serving victims of crypto scams with financial-grade security expertise.
             </p>
-            <div className="flex space-x-4">
-              <Link href="https://twitter.com/CipherTrace" className="text-slate-400 hover:text-blue-400 transition-colors">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </Link>
-              <Link href="mailto:contact@ciphertrace.com" className="text-slate-400 hover:text-blue-400 transition-colors">
-                <Mail className="h-5 w-5" />
-                <span className="sr-only">Email</span>
-              </Link>
+            <div className="flex gap-3">
+              <Badge variant="gold" className="text-xs">24/7 Support</Badge>
+              <Badge variant="outline" className="text-xs border-primary-foreground/20 text-primary-foreground/80">Licensed Experts</Badge>
             </div>
           </div>
 
-          <div>
-            <h3 className="font-semibold mb-4">Services</h3>
-            <ul className="space-y-2 text-sm text-slate-300">
-              <li><Link href="/services" className="hover:text-white transition-colors">AML Compliance</Link></li>
-              <li><Link href="/services" className="hover:text-white transition-colors">Blockchain Forensics</Link></li>
-              <li><Link href="/services" className="hover:text-white transition-colors">Threat Intelligence</Link></li>
-              <li><Link href="/services" className="hover:text-white transition-colors">De-Anonymization Tools</Link></li>
+          <div className="lg:col-span-2">
+            <h3 className="font-serif text-lg font-semibold mb-6">Services</h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/services" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  Blockchain Forensics
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  Fund Recovery
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  Legal Support
+                </Link>
+              </li>
+              <li>
+                <Link href="/case-studies" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  Case Studies
+                </Link>
+              </li>
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2 text-sm text-slate-300">
-              <li><Link href="/resources" className="hover:text-white transition-colors">Blog</Link></li>
-              <li><Link href="/resources" className="hover:text-white transition-colors">Security Guides</Link></li>
-              <li><Link href="/help-individuals" className="hover:text-white transition-colors">Scam Recovery</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Report Fraud</Link></li>
+          <div className="lg:col-span-2">
+            <h3 className="font-serif text-lg font-semibold mb-6">Resources</h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/resources" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  Education Center
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources#guides" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  Security Guides
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-semibold mb-4 flex items-center">
-              <Phone className="h-5 w-5 mr-2 text-green-400" />
-              24/7 Support
+          <div className="lg:col-span-4">
+            <h3 className="font-serif text-lg font-semibold mb-6 flex items-center gap-2">
+              <Phone className="h-5 w-5 text-accent" />
+              24/7 Support Line
             </h3>
-            <div className="space-y-3">
-              <div className="bg-slate-800 p-3 rounded-lg border border-slate-700">
-                <p className="text-xs text-slate-400 mb-1">Call or Text Anytime</p>
-                <div className="flex items-center gap-2">
-                  <a href={telUrl} className="text-lg font-bold text-green-400 hover:text-green-300 transition-colors font-mono">
+            <div className="space-y-4">
+              <div className="bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 p-5 rounded-xl">
+                <p className="text-xs text-primary-foreground/60 mb-2 uppercase tracking-wide">Call or Text Anytime</p>
+                <div className="flex items-center gap-2 mb-4">
+                  <a 
+                    href={telUrl} 
+                    className="text-xl font-bold text-accent hover:text-accent/80 transition-colors font-mono"
+                  >
                     {phoneNumber}
                   </a>
                   <button
                     onClick={copyPhone}
-                    className="p-1.5 hover:bg-slate-700 rounded transition-colors text-slate-400 hover:text-green-400"
+                    className="p-2 hover:bg-primary-foreground/10 rounded-lg transition-colors text-primary-foreground/60 hover:text-accent"
                     aria-label="Copy phone number"
                   >
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                   </button>
                 </div>
+                <div className="flex flex-col gap-2">
+                  <a 
+                    href={whatsappUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-accent transition-colors group"
+                  >
+                    <MessageCircle className="h-4 w-4" />
+                    <span>WhatsApp Support</span>
+                    <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </a>
+                  <Link 
+                    href="/contact"
+                    className="flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-accent transition-colors"
+                  >
+                    <Mail className="h-4 w-4" />
+                    <span>Email Support</span>
+                  </Link>
+                </div>
               </div>
-              <div className="space-y-2">
-                <a 
-                  href={whatsappUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-slate-300 hover:text-green-400 transition-colors"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  <span>WhatsApp Chat</span>
-                </a>
-                <a 
-                  href={telUrl}
-                  className="flex items-center gap-2 text-sm text-slate-300 hover:text-green-400 transition-colors"
-                >
-                  <Phone className="h-4 w-4" />
-                  <span>Direct Call</span>
-                </a>
-                <Link 
-                  href="/contact"
-                  className="flex items-center gap-2 text-sm text-slate-300 hover:text-blue-400 transition-colors"
-                >
-                  <Mail className="h-4 w-4" />
-                  <span>Email Support</span>
-                </Link>
-              </div>
+              <Button asChild variant="gold" size="lg" className="w-full">
+                <Link href="/report-scam">Report Fraud Case</Link>
+              </Button>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-slate-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-slate-400">
-            © {new Date().getFullYear()} CipherTrace. A Mastercard Company. All rights reserved.
+        <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-primary-foreground/60">
+            © {new Date().getFullYear()} CipherTrace Recovery. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-sm text-slate-400 hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="text-sm text-slate-400 hover:text-white transition-colors">Terms of Service</Link>
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link href="/privacy" className="text-sm text-primary-foreground/60 hover:text-accent transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="text-sm text-primary-foreground/60 hover:text-accent transition-colors">
+              Terms of Service
+            </Link>
+            <Link href="/admin" className="text-sm text-primary-foreground/60 hover:text-accent transition-colors">
+              Admin
+            </Link>
           </div>
-        </div>
-        <div className="mt-4 text-center">
-          <Link href="/admin" className="text-xs text-slate-500 hover:text-slate-400 transition-colors">
-            Admin Login
-          </Link>
         </div>
       </div>
     </footer>
