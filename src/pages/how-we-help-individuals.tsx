@@ -190,7 +190,7 @@ export default function HowWeHelpIndividualsPage() {
         <link rel="canonical" href="https://ciphertracers.com/how-we-help-individuals" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen bg-background">
         <Header />
 
         <main>
