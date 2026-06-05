@@ -12,6 +12,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Play, Star, CheckCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function HomePage() {
   const featuredVideos = [
@@ -178,14 +179,14 @@ export default function HomePage() {
           {/* Services Overview */}
           <ServicesOverview />
 
-          {/* Success Stories */}
-          <SuccessStories />
-
           {/* Testimonials */}
           <TestimonialsSection />
 
           {/* Blog Preview / Resources */}
           <BlogPreview />
+
+          {/* FAQ Section */}
+          <FAQSection />
         </main>
 
         <Footer />

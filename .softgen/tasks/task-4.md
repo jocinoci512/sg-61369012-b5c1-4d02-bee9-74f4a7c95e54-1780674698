@@ -13,10 +13,10 @@ position: 3
 Create premium accordion-style FAQ section for homepage with 8-10 questions covering common concerns — pricing, process, success rates, legal compliance, data security.
 
 ## Checklist
-- [ ] Create FAQSection component with accordion UI
-- [ ] Add 10 questions covering: pricing, timeline, success rate, legal, security, process, refunds, cases handled, qualifications, contact
-- [ ] Style with navy/gold accents and premium typography
-- [ ] Add to homepage before footer
+- [x] Create FAQSection component with accordion UI
+- [x] Add 10 questions covering: pricing, timeline, success rate, legal, security, process, refunds, cases handled, qualifications, contact
+- [x] Style with navy/gold accents and premium typography
+- [x] Add to homepage before footer
 
 ## Acceptance
 - FAQs answer key decision-making questions
