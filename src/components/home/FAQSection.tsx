@@ -75,7 +75,7 @@ export function FAQSection() {
                 <AccordionTrigger className="text-left font-serif text-lg font-semibold text-foreground hover:text-primary py-6 hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 pt-2">
+                <AccordionContent className="text-foreground/80 leading-relaxed pb-6 pt-2">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
