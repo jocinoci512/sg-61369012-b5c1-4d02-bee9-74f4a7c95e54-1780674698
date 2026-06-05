@@ -20,6 +20,9 @@ export default function Header() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
+          <Link href="/" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
+            Home
+          </Link>
           <Link href="/services" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
             Services
           </Link>
@@ -29,8 +32,17 @@ export default function Header() {
           <Link href="/resources" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
             Resources
           </Link>
+          <Link href="/success-stories" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
+            Teams
+          </Link>
+          <Link href="/reviews" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
+            Testimonials
+          </Link>
           <Link href="/about" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
-            About
+            About Us
+          </Link>
+          <Link href="/contact" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
+            Contact Us
           </Link>
         </nav>
 
@@ -63,6 +75,9 @@ export default function Header() {
               </div>
               
               <nav className="flex flex-col gap-6">
+                <Link href="/" className="text-base font-semibold text-foreground hover:text-primary transition-colors py-2 border-b border-border">
+                  Home
+                </Link>
                 <Link href="/services" className="text-base font-semibold text-foreground hover:text-primary transition-colors py-2 border-b border-border">
                   Services
                 </Link>
@@ -72,8 +87,17 @@ export default function Header() {
                 <Link href="/resources" className="text-base font-semibold text-foreground hover:text-primary transition-colors py-2 border-b border-border">
                   Resources
                 </Link>
+                <Link href="/success-stories" className="text-base font-semibold text-foreground hover:text-primary transition-colors py-2 border-b border-border">
+                  Teams
+                </Link>
+                <Link href="/reviews" className="text-base font-semibold text-foreground hover:text-primary transition-colors py-2 border-b border-border">
+                  Testimonials
+                </Link>
                 <Link href="/about" className="text-base font-semibold text-foreground hover:text-primary transition-colors py-2 border-b border-border">
-                  About
+                  About Us
+                </Link>
+                <Link href="/contact" className="text-base font-semibold text-foreground hover:text-primary transition-colors py-2 border-b border-border">
+                  Contact Us
                 </Link>
                 
                 <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-border">
