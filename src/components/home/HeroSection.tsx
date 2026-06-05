@@ -11,7 +11,7 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-primary">
+    <section className="relative overflow-hidden bg-[hsl(220,90%,20%)]">
       {/* Premium Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -30,11 +30,11 @@ export function HeroSection() {
             </Badge>
             
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
                 Recover Your Stolen Crypto Assets
               </h1>
               
-              <p className="text-xl md:text-2xl text-primary-foreground/80 leading-relaxed max-w-2xl">
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl">
                 Professional blockchain investigation and fund recovery services. We trace stolen cryptocurrency across global networks and recover what's rightfully yours.
               </p>
             </div>
@@ -46,7 +46,7 @@ export function HeroSection() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-lg h-14 px-8 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button asChild size="lg" variant="outline" className="text-lg h-14 px-8 border-white/30 text-white hover:bg-white/10">
                 <Link href="/case-studies">View Success Stories</Link>
               </Button>
             </div>
@@ -54,11 +54,11 @@ export function HeroSection() {
             <div className="flex items-center gap-6 pt-4">
               <div className="flex items-center gap-2">
                 <Clock className="h-5 w-5 text-accent" />
-                <span className="text-primary-foreground/70 text-sm">24/7 Support</span>
+                <span className="text-white/80 text-sm">24/7 Support</span>
               </div>
               <div className="flex items-center gap-2">
                 <Award className="h-5 w-5 text-accent" />
-                <span className="text-primary-foreground/70 text-sm">Licensed Experts</span>
+                <span className="text-white/80 text-sm">Licensed Experts</span>
               </div>
             </div>
           </div>
