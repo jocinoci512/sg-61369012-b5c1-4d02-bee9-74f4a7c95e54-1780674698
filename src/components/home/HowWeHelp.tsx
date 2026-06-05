@@ -1,99 +1,135 @@
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Users, Lock, BookOpen, ArrowRight } from "lucide-react";
+import { Shield, Users, Lock, BookOpen, ArrowRight, PhoneCall } from "lucide-react";
 import Link from "next/link";
 
 export default function HowWeHelp() {
   const benefits = [
     {
       icon: Shield,
-      title: "Scam Recovery Assistance",
-      description: "Our forensics experts help trace stolen funds and provide evidence for law enforcement and legal proceedings."
+      title: "Asset Recovery",
+      description: "Blockchain forensics to trace stolen funds and provide evidence for legal proceedings and law enforcement."
     },
     {
       icon: Users,
-      title: "Transaction Safety",
-      description: "Ensure your exchanges and wallets use compliant platforms with our AML screening technology."
+      title: "Platform Screening",
+      description: "Verify exchanges and wallets use compliant, secure infrastructure before you transact."
     },
     {
       icon: Lock,
       title: "Privacy Protection",
-      description: "Advanced tools that protect legitimate privacy while combating illicit financial activities."
+      description: "Advanced tools that safeguard legitimate privacy while combating illicit activities."
     },
     {
       icon: BookOpen,
-      title: "Education & Awareness",
-      description: "Comprehensive resources to help you identify and avoid cryptocurrency scams and fraud."
+      title: "Fraud Education",
+      description: "Comprehensive resources to identify and avoid cryptocurrency scams before they happen."
     }
   ];
 
   const steps = [
-    { step: "1", title: "Report to Authorities", description: "File a complaint with IC3.gov (US) or ActionFraud.police.uk (UK)" },
-    { step: "2", title: "Contact Your Exchange", description: "Immediately notify your cryptocurrency exchange or wallet provider" },
-    { step: "3", title: "Gather Evidence", description: "Collect all transaction IDs, addresses, and communication records" },
-    { step: "4", title: "Seek Professional Help", description: "Contact CipherTrace for advanced blockchain forensics assistance" }
+    { 
+      number: "01", 
+      title: "Report Immediately", 
+      description: "File with IC3.gov (US), ActionFraud (UK), or your local authorities"
+    },
+    { 
+      number: "02", 
+      title: "Freeze Accounts", 
+      description: "Contact your exchange or wallet provider to prevent further transactions"
+    },
+    { 
+      number: "03", 
+      title: "Document Evidence", 
+      description: "Gather transaction IDs, wallet addresses, and all communication records"
+    },
+    { 
+      number: "04", 
+      title: "Get Expert Help", 
+      description: "Contact our forensics team for advanced blockchain analysis"
+    }
   ];
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <Badge variant="outline" className="mb-4">
-            Individual Protection
+    <section className="py-20 md:py-28 bg-background">
+      <div className="container">
+        <div className="text-center mb-16">
+          <Badge variant="gold" className="mb-4">
+            <Users className="h-3 w-3 mr-1" />
+            Individual Support
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            How We Help Individuals
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Protecting Individuals
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Whether you're a victim of crypto fraud or want to protect your investments, 
-            CipherTrace provides the tools and expertise to secure your digital assets.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Whether you're a fraud victim or protecting your investments — we provide the expertise to secure your digital assets.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {benefits.map((benefit, index) => (
-            <Card key={index} className="text-center h-full">
-              <CardHeader>
-                <benefit.icon className="h-12 w-12 text-blue-600 mx-auto mb-3" />
-                <CardTitle className="text-lg">{benefit.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>{benefit.description}</CardDescription>
+            <Card key={index} className="text-center hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="h-16 w-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-6">
+                  <benefit.icon className="h-8 w-8 text-accent" />
+                </div>
+                <h3 className="font-serif text-xl font-bold text-foreground mb-3">
+                  {benefit.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {benefit.description}
+                </p>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="bg-slate-50 rounded-2xl p-8 mb-8">
-          <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">
-            Steps After a Crypto Scam
+        <div className="bg-primary rounded-2xl p-10 md:p-12 border border-border shadow-xl mb-12">
+          <h3 className="font-serif text-3xl font-bold text-primary-foreground mb-8 text-center">
+            If You've Been Scammed
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
               <div key={index} className="relative">
-                <div className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
-                    {step.step}
+                <div className="space-y-4">
+                  <div className="font-mono text-5xl font-bold text-accent opacity-50">
+                    {step.number}
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-slate-900 mb-2">{step.title}</h4>
-                    <p className="text-sm text-slate-600">{step.description}</p>
-                  </div>
+                  <h4 className="font-serif text-xl font-bold text-primary-foreground">
+                    {step.title}
+                  </h4>
+                  <p className="text-sm text-primary-foreground/70 leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
                 {index < steps.length - 1 && (
-                  <ArrowRight className="hidden lg:block absolute top-4 -right-3 h-4 w-4 text-slate-400" />
+                  <ArrowRight className="hidden lg:block absolute top-8 -right-4 h-6 w-6 text-accent/30" />
                 )}
               </div>
             ))}
           </div>
         </div>
 
-        <div className="text-center">
-          <Button size="lg" asChild>
-            <Link href="/contact">Report a Scam Now</Link>
-          </Button>
+        <div className="text-center bg-muted rounded-2xl p-10 border border-border">
+          <PhoneCall className="h-12 w-12 text-accent mx-auto mb-6" />
+          <h3 className="font-serif text-3xl font-bold text-foreground mb-4">
+            24/7 Emergency Support
+          </h3>
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+            Every minute matters in fraud recovery. Our global team is standing by to trace your stolen funds and coordinate with law enforcement.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" variant="gold">
+              <Link href="/report-scam">
+                Report Scam Now
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link href="/contact">Free Consultation</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>

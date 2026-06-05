@@ -13,12 +13,11 @@ position: 1
 Redesign homepage with Trust & Authority aesthetic — asymmetric hero, strategic gold accents, premium card elevation, generous spacing. Victim-focused messaging with confidence-inspiring visuals.
 
 ## Checklist
-- [ ] Redesign hero with asymmetric layout, strong headline, gold accent CTA
-- [ ] Update trust signals section with premium styling
-- [ ] Modernize service cards with subtle shadows and hover states
-- [ ] Restyle testimonials with quoted emphasis and professional portraits
-- [ ] Update success stories with outcome-focused metrics
-- [ ] Polish how-we-help section with icon + text balance
+- [x] Redesign hero section with navy background, gold CTAs, stats card
+- [x] Update TrustSignals with navy/gold palette, remove busy gradients
+- [x] Modernize ServicesOverview with elevated cards and premium typography
+- [x] Redesign HowWeHelp with navy section and gold accents
+- [x] Update video testimonials section styling
 
 ## Acceptance
 - Hero immediately communicates authority and expertise
