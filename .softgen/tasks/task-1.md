@@ -16,9 +16,9 @@ Establish Trust & Authority design system foundation — deep navy + gold palett
 - [x] Update globals.css with Trust & Authority color tokens
 - [x] Import Crimson Pro (headings) and Source Sans 3 (body) from Google Fonts
 - [x] Register fonts in tailwind.config.ts
-- [ ] Create custom badge variants (gold, navy)
-- [ ] Create premium button variants
-- [ ] Update card styling for elevated premium feel
+- [x] Create custom badge variants (gold, navy)
+- [x] Create premium button variants
+- [x] Update card styling for elevated premium feel
 
 ## Acceptance
 - Colors reflect deep navy + muted gold palette
