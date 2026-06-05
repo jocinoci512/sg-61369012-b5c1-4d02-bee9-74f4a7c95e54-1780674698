@@ -1,6 +1,6 @@
 ---
 title: Testimonials Page
-status: todo
+status: done
 priority: high
 type: feature
 tags: [testimonials, reviews, video]

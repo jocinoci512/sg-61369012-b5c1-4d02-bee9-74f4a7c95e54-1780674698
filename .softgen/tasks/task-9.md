@@ -1,6 +1,6 @@
 ---
 title: Header Search Functionality
-status: todo
+status: done
 priority: high
 type: feature
 tags: [search, header, navigation]
