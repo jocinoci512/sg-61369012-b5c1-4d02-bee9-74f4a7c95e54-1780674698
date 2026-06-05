@@ -272,14 +272,14 @@ Reference ID: ${newReferenceId}
   };
 
   // WhatsApp contact URL
-  const whatsappNumber = "19402384915"; // +1 (940) 238-4915 without special characters
+  const whatsappNumber = "13435042112"; // +1 (343) 504-2112 without special characters
   const whatsappMessage = referenceId 
     ? `Hello, I just submitted a fraud case. My reference ID is ${referenceId}.`
     : "Hello, I need help reporting a crypto fraud case.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   // Contact URLs for different platforms
-  const phoneNumber = "+19402384915";
+  const phoneNumber = "+13435042112";
   const smsUrl = `sms:${phoneNumber}${referenceId ? `&body=${encodeURIComponent(`My reference ID is ${referenceId}`)}` : ''}`;
   const telUrl = `tel:${phoneNumber}`;
 
@@ -355,7 +355,7 @@ Reference ID: ${newReferenceId}
                   </Button>
                 </div>
                 <p className="text-sm text-blue-200 mt-4">
-                  📱 Contact us: WhatsApp • iMessage • SMS • Call: <strong className="text-white">+1 (940) 238-4915</strong>
+                  📱 Contact us: WhatsApp • iMessage • SMS • Call: <strong className="text-white">+1 (343) 504-2112</strong>
                 </p>
               </div>
             </div>
@@ -787,7 +787,7 @@ Reference ID: ${newReferenceId}
                         </Button>
                       </div>
                       <p className="text-sm text-slate-600 text-center">
-                        Contact us directly at <strong>+1 (940) 238-4915</strong>
+                        Contact us directly at <strong>+1 (343) 504-2112</strong>
                       </p>
                     </div>
 
