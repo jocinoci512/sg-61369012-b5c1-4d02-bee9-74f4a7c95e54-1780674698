@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import HeroSection from "@/components/home/HeroSection";
+import { HeroSection } from "@/components/home/HeroSection";
 import TrustSignals from "@/components/home/TrustSignals";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import HowWeHelp from "@/components/home/HowWeHelp";
