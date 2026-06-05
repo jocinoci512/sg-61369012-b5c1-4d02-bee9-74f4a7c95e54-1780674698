@@ -48,7 +48,7 @@ Submitted: ${new Date().toLocaleString()}
       const web3formsKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
 
       if (!web3formsKey) {
-        throw new Error("Email service not configured. Please contact support directly at contact@ciphertracers.com");
+        throw new Error("Email service not configured. Please contact support directly at support@backtracers.com");
       }
 
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -62,7 +62,7 @@ Submitted: ${new Date().toLocaleString()}
           from_name: name,
           email: email,
           message: emailContent,
-          to_email: "contact@ciphertracers.com"
+          to_email: "support@backtracers.com"
         }),
       });
 
@@ -95,7 +95,7 @@ Submitted: ${new Date().toLocaleString()}
       }
     } catch (err) {
       setSubmitting(false);
-      setError(err instanceof Error ? err.message : "Failed to send message. Please try again or email us directly at contact@ciphertracers.com");
+      setError(err instanceof Error ? err.message : "Failed to send message. Please try again or email us directly at support@backtracers.com");
       console.error("Contact form error:", err);
     }
   };
@@ -345,8 +345,8 @@ Submitted: ${new Date().toLocaleString()}
                     </CardHeader>
                     <CardContent>
                       <p className="text-muted-foreground mb-3">For detailed case documentation and non-urgent inquiries:</p>
-                      <a href="mailto:contact@ciphertracers.com" className="text-primary hover:text-primary/80 font-semibold text-lg break-all transition-colors">
-                        contact@ciphertracers.com
+                      <a href="mailto:support@backtracers.com" className="text-primary hover:text-primary/80 font-semibold text-lg break-all transition-colors">
+                        support@backtracers.com
                       </a>
                       <div className="mt-4 p-3 bg-muted rounded-lg">
                         <p className="text-sm text-muted-foreground flex items-center gap-2">

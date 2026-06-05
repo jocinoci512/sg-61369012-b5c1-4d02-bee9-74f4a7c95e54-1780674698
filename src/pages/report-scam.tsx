@@ -218,7 +218,7 @@ Reference ID: ${newReferenceId}
       const web3formsKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
 
       if (!web3formsKey) {
-        throw new Error("Email service not configured. Please contact support directly at contact@ciphertracers.com");
+        throw new Error("Email service not configured. Please contact support directly at support@backtracers.com");
       }
 
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -232,7 +232,7 @@ Reference ID: ${newReferenceId}
           from_name: formData.fullName,
           email: formData.email,
           message: emailContent,
-          to_email: "contact@ciphertracers.com"
+          to_email: "support@backtracers.com"
         }),
       });
 
@@ -267,7 +267,7 @@ Reference ID: ${newReferenceId}
       }
     } catch (err) {
       setSubmitting(false);
-      setError(err instanceof Error ? err.message : "Failed to submit report. Please try again or email us directly at contact@ciphertracers.com");
+      setError(err instanceof Error ? err.message : "Failed to submit report. Please try again or email us directly at support@backtracers.com");
       console.error("Fraud report error:", err);
     }
   };
@@ -305,7 +305,7 @@ Reference ID: ${newReferenceId}
         <link rel="canonical" href="https://ciphertracers.com/report-scam" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
+      <div className="min-h-screen bg-background">
         <Header />
 
         <main>
