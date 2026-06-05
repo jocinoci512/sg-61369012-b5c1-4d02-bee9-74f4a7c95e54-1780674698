@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { Mail, MessageSquare, Send, Twitter, ExternalLink, AlertOctagon, Phone, MessageCircle, Smartphone, Copy, Check } from "lucide-react";
+import { Mail, MessageSquare, Send, Twitter, ExternalLink, AlertOctagon, Phone, MessageCircle, Smartphone, Copy, Check, Clock, MapPin, Shield } from "lucide-react";
 import { useState } from "react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertCircle, CheckCircle2 } from "lucide-react";
@@ -116,47 +116,64 @@ Submitted: ${new Date().toLocaleString()}
   return (
     <>
       <Head>
-        <title>Contact CipherTracers | Get in Touch for Crypto Security Solutions</title>
-        <meta name="description" content="Contact CipherTracers for inquiries about our blockchain analytics, AML compliance, and crypto security services. Report scams and connect with our team." />
-        <meta name="keywords" content="contact CipherTracers, crypto security support, blockchain analytics inquiry, report crypto scam, CipherTracers email" />
-        <meta property="og:title" content="Contact CipherTracers | Secure Your Crypto Future" />
-        <meta property="og:description" content="Reach out to our team for expert solutions in cryptocurrency intelligence and security." />
+        <title>Contact CipherTrace Recovery | 24/7 Crypto Fraud Support</title>
+        <meta name="description" content="Contact CipherTrace Recovery for professional blockchain forensics and cryptocurrency recovery assistance. Available 24/7 via phone, WhatsApp, and email." />
+        <meta name="keywords" content="contact crypto recovery, blockchain forensics support, report crypto scam, crypto fraud assistance, 24/7 recovery support" />
+        <meta property="og:title" content="Contact CipherTrace Recovery | Professional Crypto Investigation" />
+        <meta property="og:description" content="Reach out to our blockchain forensics team for immediate assistance with cryptocurrency fraud and asset recovery." />
         <meta property="og:url" content="https://ciphertracers.com/contact" />
-        <meta property="og:site_name" content="CipherTracers" />
         <link rel="canonical" href="https://ciphertracers.com/contact" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
+      <div className="min-h-screen bg-background">
         <Header />
 
         <main>
           {/* Hero Section */}
-          <section className="py-20 bg-blue-700 text-white">
-            <div className="container mx-auto max-w-7xl px-4 md:px-6 lg:px-8 text-center">
-              <Badge variant="secondary" className="mb-4 bg-white/20 text-white border-white/30">Contact Us</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Get in Touch
-              </h1>
-              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-                We&apos;re here to help with your cryptocurrency intelligence and security needs. Reach out to our team for support or inquiries.
-              </p>
+          <section className="relative py-24 md:py-32 bg-primary text-primary-foreground overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.05),transparent_50%)]" />
+            <div className="container relative">
+              <div className="max-w-3xl mx-auto text-center">
+                <Badge variant="gold" className="mb-6">
+                  <Phone className="h-3 w-3 mr-1" />
+                  24/7 Available
+                </Badge>
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                  Get Expert Assistance
+                </h1>
+                <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
+                  Our blockchain forensics team is ready to help you recover stolen cryptocurrency and investigate fraud cases.
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <div className="flex items-center gap-2 text-primary-foreground/90">
+                    <Shield className="h-5 w-5 text-accent" />
+                    <span className="font-semibold">Licensed Investigators</span>
+                  </div>
+                  <div className="hidden sm:block w-px h-6 bg-primary-foreground/20" />
+                  <div className="flex items-center gap-2 text-primary-foreground/90">
+                    <Clock className="h-5 w-5 text-accent" />
+                    <span className="font-semibold">1-Hour Response</span>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent" />
           </section>
 
-          {/* Quick Contact Banner */}
-          <section className="py-8 bg-gradient-to-r from-green-600 to-green-700">
-            <div className="container mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+          {/* 24/7 Contact Banner */}
+          <section className="py-8 bg-accent text-accent-foreground">
+            <div className="container">
               <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                <div className="text-white text-center md:text-left">
-                  <h2 className="text-2xl md:text-3xl font-bold mb-2">Need Immediate Assistance?</h2>
-                  <p className="text-green-100 text-lg">Connect with us instantly via phone, WhatsApp, or message</p>
-                  <div className="flex items-center justify-center md:justify-start gap-2 mt-2">
-                    <a href={telUrl} className="text-white font-mono font-bold text-xl hover:text-green-100 transition-colors">
+                <div className="text-center md:text-left">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-2">Immediate Assistance Available</h2>
+                  <p className="text-accent-foreground/90 text-lg">Connect instantly via phone, WhatsApp, iMessage, or SMS</p>
+                  <div className="flex items-center justify-center md:justify-start gap-2 mt-3">
+                    <a href={telUrl} className="text-accent-foreground font-mono font-bold text-2xl hover:text-accent-foreground/80 transition-colors">
                       {displayPhone}
                     </a>
                     <button
                       onClick={copyPhone}
-                      className="p-2 hover:bg-white/10 rounded transition-colors text-white"
+                      className="p-2 hover:bg-accent-foreground/10 rounded transition-colors"
                       aria-label="Copy phone number"
                     >
                       {copiedPhone ? <Check className="h-5 w-5" /> : <Copy className="h-5 w-5" />}
@@ -164,22 +181,22 @@ Submitted: ${new Date().toLocaleString()}
                   </div>
                 </div>
                 <div className="flex flex-wrap justify-center gap-3">
-                  <Button asChild size="lg" className="bg-white text-green-700 hover:bg-green-50 min-w-[140px]">
+                  <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 min-w-[140px] shadow-md">
                     <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                       <MessageCircle className="mr-2 h-5 w-5" />
                       WhatsApp
                     </a>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10 min-w-[140px]">
+                  <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/5 min-w-[140px]">
                     <a href={smsUrl}>
                       <Smartphone className="mr-2 h-5 w-5" />
                       iMessage/SMS
                     </a>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10 min-w-[140px]">
+                  <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/5 min-w-[140px]">
                     <a href={telUrl}>
                       <Phone className="mr-2 h-5 w-5" />
-                      Call Now
+                      Call Direct
                     </a>
                   </Button>
                 </div>
@@ -188,190 +205,237 @@ Submitted: ${new Date().toLocaleString()}
           </section>
 
           {/* Contact Form and Information Section */}
-          <section className="py-16 bg-white">
-            <div className="container mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-              <div className="grid md:grid-cols-2 gap-12 items-start">
+          <section className="py-20 bg-card">
+            <div className="container">
+              <div className="grid lg:grid-cols-2 gap-12 items-start">
                 {/* Contact Form */}
-                <Card className="shadow-lg">
-                  <CardHeader>
-                    <CardTitle className="text-2xl flex items-center">
-                      <MessageSquare className="h-7 w-7 mr-2 text-blue-600" />
-                      Send Us a Message
-                    </CardTitle>
-                    <CardDescription>
-                      Fill out the form below, and we will get back to you as soon as possible.
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    {error && (
-                      <Alert variant="destructive" className="mb-4">
-                        <AlertCircle className="h-4 w-4" />
-                        <AlertDescription>{error}</AlertDescription>
-                      </Alert>
-                    )}
-                    {submitted && (
-                      <Alert className="mb-4 border-green-200 bg-green-50">
-                        <CheckCircle2 className="h-4 w-4 text-green-600" />
-                        <AlertDescription className="text-green-800">
-                          Thank you! Your message has been sent successfully. We will respond within 24-48 hours.
-                        </AlertDescription>
-                      </Alert>
-                    )}
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div>
-                        <Label htmlFor="name">Full Name</Label>
-                        <Input id="name" name="name" type="text" placeholder="John Doe" className="mt-1" required />
-                      </div>
-                      <div>
-                        <Label htmlFor="email">Email Address</Label>
-                        <Input id="email" name="email" type="email" placeholder="john.doe@example.com" className="mt-1" required />
-                      </div>
-                      <div>
-                        <Label htmlFor="subject">Subject</Label>
-                        <Input id="subject" name="subject" type="text" placeholder="Inquiry about services" className="mt-1" required />
-                      </div>
-                      <div>
-                        <Label htmlFor="message">Message</Label>
-                        <Textarea id="message" name="message" placeholder="Your message..." rows={5} className="mt-1" required />
-                      </div>
-                      <Button type="submit" size="lg" className="w-full bg-blue-600 hover:bg-blue-700" disabled={submitting}>
-                        {submitting ? "Sending..." : "Submit Inquiry"} <Send className="ml-2 h-4 w-4" />
-                      </Button>
-                    </form>
-                  </CardContent>
-                </Card>
+                <div>
+                  <div className="mb-8">
+                    <Badge variant="navy" className="mb-4">
+                      <MessageSquare className="h-3 w-3 mr-1" />
+                      Send Message
+                    </Badge>
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                      Describe Your Case
+                    </h2>
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      Fill out the form below with details about your situation. Our team will review and respond within 1-2 hours during business hours.
+                    </p>
+                  </div>
+
+                  <Card className="shadow-xl border-border">
+                    <CardContent className="pt-8">
+                      {error && (
+                        <Alert variant="destructive" className="mb-6">
+                          <AlertCircle className="h-4 w-4" />
+                          <AlertDescription>{error}</AlertDescription>
+                        </Alert>
+                      )}
+                      {submitted && (
+                        <Alert className="mb-6 border-accent/20 bg-accent/5">
+                          <CheckCircle2 className="h-4 w-4 text-accent" />
+                          <AlertDescription className="text-foreground">
+                            Thank you! Your message has been received. Our team will respond within 1-2 hours during business hours (9 AM - 6 PM EST).
+                          </AlertDescription>
+                        </Alert>
+                      )}
+                      <form onSubmit={handleSubmit} className="space-y-6">
+                        <div>
+                          <Label htmlFor="name" className="text-base font-semibold">Full Name</Label>
+                          <Input id="name" name="name" type="text" placeholder="John Doe" className="mt-2 h-11" required />
+                        </div>
+                        <div>
+                          <Label htmlFor="email" className="text-base font-semibold">Email Address</Label>
+                          <Input id="email" name="email" type="email" placeholder="john.doe@example.com" className="mt-2 h-11" required />
+                        </div>
+                        <div>
+                          <Label htmlFor="subject" className="text-base font-semibold">Subject</Label>
+                          <Input id="subject" name="subject" type="text" placeholder="Brief description of your case" className="mt-2 h-11" required />
+                        </div>
+                        <div>
+                          <Label htmlFor="message" className="text-base font-semibold">Message</Label>
+                          <Textarea id="message" name="message" placeholder="Please provide details about the fraud incident, amount involved, and any relevant information..." rows={6} className="mt-2" required />
+                        </div>
+                        <Button type="submit" size="lg" variant="gold" className="w-full h-12 text-base" disabled={submitting}>
+                          {submitting ? "Sending..." : "Submit Case Inquiry"}
+                          <Send className="ml-2 h-5 w-5" />
+                        </Button>
+                        <p className="text-sm text-muted-foreground text-center">
+                          All information is kept strictly confidential and protected by attorney-client privilege.
+                        </p>
+                      </form>
+                    </CardContent>
+                  </Card>
+                </div>
 
                 {/* Contact Information */}
-                <div className="space-y-8">
-                  {/* Quick Contact Card */}
-                  <Card className="shadow-lg border-green-200 bg-gradient-to-br from-green-50 to-white">
-                    <CardHeader className="border-b bg-green-50/50">
-                      <CardTitle className="text-2xl flex items-center text-green-700">
-                        <Phone className="h-7 w-7 mr-2" />
-                        Quick Contact
+                <div className="space-y-6">
+                  {/* Emergency Contact Card */}
+                  <Card className="shadow-xl border-accent/30 bg-gradient-to-br from-accent/5 to-card">
+                    <CardHeader className="border-b bg-accent/5">
+                      <CardTitle className="text-2xl flex items-center">
+                        <Phone className="h-7 w-7 mr-3 text-accent" />
+                        24/7 Emergency Line
                       </CardTitle>
-                      <CardDescription className="text-green-600">
-                        Connect with us instantly through your preferred channel
+                      <CardDescription>
+                        Immediate assistance for urgent cryptocurrency fraud cases
                       </CardDescription>
                     </CardHeader>
-                    <CardContent className="pt-6">
-                      <div className="text-center mb-6">
-                        <p className="text-sm font-medium text-slate-600 mb-2">24/7 Support Line</p>
-                        <div className="flex items-center justify-center gap-2">
-                          <a href={telUrl} className="text-3xl font-bold text-green-700 hover:text-green-800 font-mono">
+                    <CardContent className="pt-6 space-y-6">
+                      <div className="text-center p-6 bg-card rounded-xl border border-border">
+                        <p className="text-sm font-medium text-muted-foreground mb-2">Direct Support Line</p>
+                        <div className="flex items-center justify-center gap-2 mb-4">
+                          <a href={telUrl} className="text-4xl font-bold text-primary hover:text-primary/80 font-mono transition-colors">
                             {displayPhone}
                           </a>
                           <button
                             onClick={copyPhone}
-                            className="p-2 hover:bg-green-100 rounded transition-colors text-green-700"
+                            className="p-2.5 hover:bg-muted rounded-lg transition-colors text-primary"
                             aria-label="Copy phone number"
                           >
                             {copiedPhone ? <Check className="h-6 w-6" /> : <Copy className="h-6 w-6" />}
                           </button>
                         </div>
+                        <Badge variant="gold" className="text-sm">
+                          Average response: &lt;5 minutes
+                        </Badge>
                       </div>
                       
-                      <div className="grid grid-cols-1 gap-3">
-                        <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 w-full h-16 text-lg">
+                      <div className="grid gap-3">
+                        <Button asChild size="lg" variant="gold" className="w-full h-14 text-base">
                           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                            <MessageCircle className="mr-3 h-6 w-6" />
+                            <MessageCircle className="mr-3 h-5 w-5" />
                             <div className="text-left flex-1">
                               <div className="font-semibold">WhatsApp Chat</div>
-                              <div className="text-xs text-green-100">Instant messaging support</div>
+                              <div className="text-xs opacity-90">Instant encrypted messaging</div>
                             </div>
                           </a>
                         </Button>
                         
-                        <Button asChild size="lg" variant="outline" className="border-green-600 text-green-700 hover:bg-green-50 w-full h-16 text-lg">
+                        <Button asChild size="lg" variant="outline" className="w-full h-14 text-base">
                           <a href={smsUrl}>
-                            <Smartphone className="mr-3 h-6 w-6" />
+                            <Smartphone className="mr-3 h-5 w-5" />
                             <div className="text-left flex-1">
                               <div className="font-semibold">iMessage / SMS</div>
-                              <div className="text-xs text-slate-500">Text message support</div>
+                              <div className="text-xs text-muted-foreground">Text message support</div>
                             </div>
                           </a>
                         </Button>
                         
-                        <Button asChild size="lg" variant="outline" className="border-green-600 text-green-700 hover:bg-green-50 w-full h-16 text-lg">
+                        <Button asChild size="lg" variant="outline" className="w-full h-14 text-base">
                           <a href={telUrl}>
-                            <Phone className="mr-3 h-6 w-6" />
+                            <Phone className="mr-3 h-5 w-5" />
                             <div className="text-left flex-1">
                               <div className="font-semibold">Direct Phone Call</div>
-                              <div className="text-xs text-slate-500">Speak with our team</div>
+                              <div className="text-xs text-muted-foreground">Speak with investigators</div>
                             </div>
                           </a>
                         </Button>
                       </div>
+                    </CardContent>
+                  </Card>
 
-                      <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-                        <p className="text-sm text-slate-700">
-                          <strong>Response Time:</strong> We typically respond within 1-2 hours during business hours (9 AM - 6 PM EST) and within 24 hours outside business hours.
+                  {/* Email Contact */}
+                  <Card className="shadow-lg">
+                    <CardHeader>
+                      <CardTitle className="text-xl flex items-center">
+                        <Mail className="h-6 w-6 mr-2 text-primary" />
+                        Email Support
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-3">For detailed case documentation and non-urgent inquiries:</p>
+                      <a href="mailto:contact@ciphertracers.com" className="text-primary hover:text-primary/80 font-semibold text-lg break-all transition-colors">
+                        contact@ciphertracers.com
+                      </a>
+                      <div className="mt-4 p-3 bg-muted rounded-lg">
+                        <p className="text-sm text-muted-foreground flex items-center gap-2">
+                          <Clock className="h-4 w-4" />
+                          <span>Response time: 1-2 hours (business hours) • 24 hours (after hours)</span>
                         </p>
                       </div>
                     </CardContent>
                   </Card>
 
-                  <Card className="shadow-md">
+                  {/* Office Location */}
+                  <Card className="shadow-lg">
                     <CardHeader>
                       <CardTitle className="text-xl flex items-center">
-                        <Mail className="h-6 w-6 mr-2 text-blue-600" />
-                        Email Us
+                        <MapPin className="h-6 w-6 mr-2 text-primary" />
+                        Headquarters
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-slate-700">For general inquiries, support, or partnership opportunities:</p>
-                      <a href="mailto:contact@ciphertracers.com" className="text-blue-600 hover:text-blue-700 font-medium text-lg break-all">
-                        contact@ciphertracers.com
-                      </a>
+                      <p className="text-muted-foreground mb-3">
+                        <strong className="text-foreground">CipherTrace Recovery</strong>
+                      </p>
+                      <p className="text-muted-foreground leading-relaxed">
+                        123 Blockchain Avenue<br />
+                        Financial District<br />
+                        New York, NY 10004<br />
+                        United States
+                      </p>
+                      <div className="mt-4 p-3 bg-muted rounded-lg">
+                        <p className="text-sm text-muted-foreground">
+                          <strong className="text-foreground">Office Hours:</strong> Monday-Friday, 9 AM - 6 PM EST<br />
+                          <strong className="text-foreground">Emergency Line:</strong> 24/7/365
+                        </p>
+                      </div>
                     </CardContent>
                   </Card>
 
-                  <Card className="shadow-md">
+                  {/* Social Media */}
+                  <Card className="shadow-lg">
                     <CardHeader>
                       <CardTitle className="text-xl flex items-center">
-                        <Twitter className="h-6 w-6 mr-2 text-blue-600" />
-                        Connect on Social Media
+                        <Twitter className="h-6 w-6 mr-2 text-primary" />
+                        Follow Us
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-slate-700 mb-2">Follow us for the latest updates and insights:</p>
-                      <Button variant="outline" asChild>
+                      <p className="text-muted-foreground mb-4">Stay updated with the latest in blockchain security and fraud prevention:</p>
+                      <Button variant="outline" asChild className="w-full">
                         <Link href="https://twitter.com/CipherTracers" target="_blank" rel="noopener noreferrer">
-                          @CipherTracers on Twitter <ExternalLink className="ml-2 h-4 w-4" />
+                          @CipherTracers on Twitter
+                          <ExternalLink className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
                     </CardContent>
                   </Card>
-
-                  <Card className="shadow-md border-red-500">
-                    <CardHeader>
-                      <CardTitle className="text-xl flex items-center text-red-600">
-                        <AlertOctagon className="h-6 w-6 mr-2" />
-                        Report a Scam
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-slate-700 mb-3">
-                        If you believe you are a victim of a cryptocurrency scam, please report it to the relevant authorities:
-                      </p>
-                      <div className="space-y-2">
-                        <Button variant="outline" className="w-full border-red-500 text-red-600 hover:bg-red-50" asChild>
-                          <Link href="https://www.ic3.gov" target="_blank" rel="noopener noreferrer">
-                            Report to IC3.gov (USA) <ExternalLink className="ml-2 h-4 w-4" />
-                          </Link>
-                        </Button>
-                        <Button variant="outline" className="w-full border-red-500 text-red-600 hover:bg-red-50" asChild>
-                          <Link href="https://www.actionfraud.police.uk" target="_blank" rel="noopener noreferrer">
-                            Report to ActionFraud (UK) <ExternalLink className="ml-2 h-4 w-4" />
-                          </Link>
-                        </Button>
-                      </div>
-                       <p className="text-xs text-slate-500 mt-3">
-                        Note: CipherTracers provides intelligence tools but does not directly handle individual scam recovery cases. Reporting to authorities is a crucial first step.
-                      </p>
-                    </CardContent>
-                  </Card>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Report Scam CTA Section */}
+          <section className="py-20 bg-destructive/5 border-y border-destructive/20">
+            <div className="container">
+              <div className="max-w-4xl mx-auto text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-destructive/10 mb-6">
+                  <AlertOctagon className="h-8 w-8 text-destructive" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  Active Fraud Case?
+                </h2>
+                <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+                  If you're currently experiencing cryptocurrency fraud, use our specialized scam reporting form to document the incident and begin immediate investigation.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button asChild size="lg" variant="gold" className="text-base">
+                    <Link href="/report-scam">
+                      Report Fraud Case
+                      <Send className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" variant="outline" className="text-base">
+                    <Link href="/case-studies">
+                      View Success Stories
+                    </Link>
+                  </Button>
+                </div>
+                <p className="text-sm text-muted-foreground mt-6">
+                  Also report to authorities: <a href="https://www.ic3.gov" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">IC3.gov (USA)</a> • <a href="https://www.actionfraud.police.uk" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">ActionFraud (UK)</a>
+                </p>
               </div>
             </div>
           </section>
