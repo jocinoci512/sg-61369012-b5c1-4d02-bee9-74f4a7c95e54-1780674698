@@ -11,7 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Switch } from "@/components/ui/switch";
 import AdminLayout from "@/components/admin/AdminLayout";
 import AnalyticsSection from "@/components/admin/AnalyticsSection";
-import { Shield, FileText, Image as ImageIcon, Search, BarChart3, Settings, Plus, Edit, Trash2, Save, Upload } from "lucide-react";
+import { Shield, FileText, Image as ImageIcon, Search, BarChart3, Plus, Edit, Trash2, Save, Upload } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import * as cmsContentService from "@/services/cmsContentService";
 import * as cmsBlogService from "@/services/cmsBlogService";
@@ -23,6 +23,13 @@ type WebsiteContent = Tables<"website_content">;
 type BlogPost = Tables<"blog_posts">;
 type MediaItem = Tables<"media_library">;
 type PageSEO = Tables<"page_seo">;
+
+// Disable static generation for admin pages
+export async function getServerSideProps() {
+  return {
+    props: {},
+  };
+}
 
 export default function AdminDashboard() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
