@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { AlertCircle, CheckCircle2, ArrowLeft, ArrowRight, ShieldCheck, FileText, Database, Send, Save, MessageCircle, Copy, Check, Clock, Award } from "lucide-react";
+import { AlertCircle, CheckCircle2, ArrowLeft, ArrowRight, ShieldCheck, FileText, Database, Send, Save, MessageCircle, Copy, Check, Clock, Award, Shield } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const FRAUD_TYPES = [
