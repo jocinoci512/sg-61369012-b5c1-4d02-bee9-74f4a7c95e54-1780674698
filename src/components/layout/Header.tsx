@@ -6,7 +6,7 @@ import { Menu, Shield, Phone } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="border-b border-border bg-card/95 backdrop-blur-sm supports-[backdrop-filter]:bg-card/90 sticky top-0 z-50 shadow-sm">
+    <header className="border-b border-border bg-card backdrop-blur-sm sticky top-0 z-50 shadow-md">
       <div className="container h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative">
@@ -15,27 +15,27 @@ export default function Header() {
           </div>
           <div className="flex flex-col">
             <span className="font-serif text-2xl font-bold text-primary tracking-tight">CipherTrace</span>
-            <span className="text-xs text-muted-foreground tracking-wide uppercase">Recovery Experts</span>
+            <span className="text-xs text-muted-foreground tracking-wide uppercase font-semibold">Recovery Experts</span>
           </div>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
-          <Link href="/services" className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors">
+          <Link href="/services" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
             Services
           </Link>
-          <Link href="/case-studies" className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors">
+          <Link href="/case-studies" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
             Case Studies
           </Link>
-          <Link href="/resources" className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors">
+          <Link href="/resources" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
             Resources
           </Link>
-          <Link href="/about" className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors">
+          <Link href="/about" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
             About
           </Link>
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
-          <Button asChild variant="outline" size="default" className="font-semibold">
+          <Button asChild variant="outline" size="default" className="font-semibold border-2">
             <a href="tel:+13435042112" className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
               <span className="font-mono">+1 343 504 2112</span>
