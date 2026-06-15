@@ -62,7 +62,7 @@ export default function ResourcesPage() {
         <meta name="keywords" content="crypto security blog, blockchain guides, scam prevention tips, CipherTrace resources, crypto education" />
         <meta property="og:title" content="CipherTrace Resources | Blog & Downloadable Guides" />
         <meta property="og:description" content="Stay informed with our expert articles and practical guides on cryptocurrency security." />
-        <link rel="canonical" href="https://ciphertrace.com/resources" />
+        <link rel="canonical" href="https://recovery-ciphertrace.com/resources" />
       </Head>
 
       <div className="min-h-screen bg-background">

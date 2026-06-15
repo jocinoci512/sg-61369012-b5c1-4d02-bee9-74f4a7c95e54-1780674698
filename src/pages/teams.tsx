@@ -124,6 +124,7 @@ export default function TeamsPage() {
         <meta name="description" content="Meet our team of licensed investigators, blockchain forensics experts, and legal professionals. 65+ years combined experience in cryptocurrency recovery." />
         <meta property="og:title" content="Expert Team | CipherTrace Recovery" />
         <meta property="og:description" content="World-class blockchain investigators and legal experts specializing in cryptocurrency fraud recovery." />
+        <link rel="canonical" href="https://recovery-ciphertrace.com/teams" />
       </Head>
 
       <div className="min-h-screen bg-background">

@@ -156,6 +156,9 @@ export default function TestimonialsPage() {
         <meta name="description" content="Watch video testimonials and read reviews from 2,400+ clients who successfully recovered stolen cryptocurrency. Average 4.9/5 stars across all platforms." />
         <meta property="og:title" content="2,400+ Client Success Stories | CipherTrace Recovery" />
         <meta property="og:description" content="Real testimonials from crypto fraud victims who recovered their funds through our blockchain forensics services." />
+        <meta property="og:url" content="https://recovery-ciphertrace.com/testimonials" />
+        <meta property="og:site_name" content="CipherTrace" />
+        <link rel="canonical" href="https://recovery-ciphertrace.com/testimonials" />
       </Head>
 
       <div className="min-h-screen bg-background">

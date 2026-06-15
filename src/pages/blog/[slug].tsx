@@ -53,7 +53,7 @@ export default function BlogPostPage({ post, exists }: BlogPostProps) {
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="CipherTrace" />
         {post.featured_image && <meta property="og:image" content={post.featured_image} />}
-        <meta property="article:published_time" content={post.date} />
+        <meta property="article:published_time" content={post.publish_date || post.created_at} />
         <meta property="article:author" content="CipherTrace Team" />
         <link rel="canonical" href={`https://recovery-ciphertrace.com/blog/${post.slug}`} />
       </Head>
