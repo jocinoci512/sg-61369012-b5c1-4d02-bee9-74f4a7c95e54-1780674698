@@ -104,7 +104,7 @@ export default function SuccessStoriesPage() {
       <Head>
         <title>Success Stories | CipherTrace Recovery - Real Crypto Recovery Cases</title>
         <meta name="description" content="Verified cryptocurrency recovery success stories. $754M+ recovered across 37,000+ cases. Read detailed case studies with recovery amounts, timelines, and outcomes." />
-        <link rel="canonical" href="https://ciphertracers.com/success-stories" />
+        <link rel="canonical" href="https://recovery-ciphertrace.com/success-stories" />
       </Head>
 
       <div className="min-h-screen bg-background">

@@ -110,9 +110,10 @@ export default function ReviewsPage() {
         <meta name="keywords" content="crypto recovery testimonials, blockchain forensics reviews, scam recovery proof, CipherTrace success stories, video evidence recovery" />
         <meta property="og:title" content="Real Recovery Stories | CipherTrace Client Reviews" />
         <meta property="og:description" content="Video evidence of successful crypto scam recoveries. Real clients, real results, real hope." />
-        <meta property="og:url" content="https://ciphertracers.com/reviews" />
+        <meta property="og:url" content="https://recovery-ciphertrace.com/reviews" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ciphertracers.com/reviews" />
+        <meta property="og:site_name" content="CipherTrace" />
+        <link rel="canonical" href="https://recovery-ciphertrace.com/reviews" />
       </Head>
 
       <div className="min-h-screen bg-background">

@@ -121,8 +121,8 @@ Submitted: ${new Date().toLocaleString()}
         <meta name="keywords" content="contact crypto recovery, blockchain forensics support, report crypto scam, crypto fraud assistance, 24/7 recovery support" />
         <meta property="og:title" content="Contact CipherTrace Recovery | Professional Crypto Investigation" />
         <meta property="og:description" content="Reach out to our blockchain forensics team for immediate assistance with cryptocurrency fraud and asset recovery." />
-        <meta property="og:url" content="https://ciphertracers.com/contact" />
-        <link rel="canonical" href="https://ciphertracers.com/contact" />
+        <meta property="og:url" content="https://recovery-ciphertrace.com/contact" />
+        <link rel="canonical" href="https://recovery-ciphertrace.com/contact" />
       </Head>
 
       <div className="min-h-screen bg-background">

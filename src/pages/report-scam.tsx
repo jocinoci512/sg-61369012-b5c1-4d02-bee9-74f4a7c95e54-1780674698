@@ -299,10 +299,10 @@ Reference ID: ${newReferenceId}
         <meta name="keywords" content="report crypto scam, cryptocurrency fraud report, blockchain forensics case, crypto recovery service, stolen crypto recovery, fraud investigation" />
         <meta property="og:title" content="Report a Crypto Scam | CipherTrace Fraud Investigation" />
         <meta property="og:description" content="Submit your crypto fraud case securely. Our forensic team provides 24-48 hour response with no upfront fees." />
-        <meta property="og:url" content="https://ciphertracers.com/report-scam" />
+        <meta property="og:url" content="https://recovery-ciphertrace.com/report-scam" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="CipherTrace" />
-        <link rel="canonical" href="https://ciphertracers.com/report-scam" />
+        <link rel="canonical" href="https://recovery-ciphertrace.com/report-scam" />
       </Head>
 
       <div className="min-h-screen bg-background">

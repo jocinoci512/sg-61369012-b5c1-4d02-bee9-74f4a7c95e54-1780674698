@@ -185,9 +185,9 @@ export default function HowWeHelpIndividualsPage() {
         <meta name="keywords" content="crypto scam recovery, fund recovery, blockchain forensics, romance scam help, investment fraud recovery, CipherTracers recovery services" />
         <meta property="og:title" content="CipherTracers | Professional Fund Recovery Services" />
         <meta property="og:description" content="Recover your stolen cryptocurrency and assets with our expert blockchain forensics and investigation services." />
-        <meta property="og:url" content="https://ciphertracers.com/how-we-help-individuals" />
-        <meta property="og:site_name" content="CipherTracers" />
-        <link rel="canonical" href="https://ciphertracers.com/how-we-help-individuals" />
+        <meta property="og:url" content="https://recovery-ciphertrace.com/how-we-help-individuals" />
+        <meta property="og:site_name" content="CipherTrace" />
+        <link rel="canonical" href="https://recovery-ciphertrace.com/how-we-help-individuals" />
       </Head>
 
       <div className="min-h-screen bg-background">
@@ -389,8 +389,8 @@ export default function HowWeHelpIndividualsPage() {
                     <h3 className="text-lg font-bold text-slate-900 mb-2">Priority Email</h3>
                     <p className="text-slate-600 mb-4">Fast-track your case with our priority email</p>
                     <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-50 w-full" asChild>
-                      <Link href="mailto:emergency@ciphertracers.com">
-                        emergency@ciphertracers.com
+                      <Link href="mailto:support@recovery-ciphertrace.com">
+                        support@recovery-ciphertrace.com
                       </Link>
                     </Button>
                   </CardContent>

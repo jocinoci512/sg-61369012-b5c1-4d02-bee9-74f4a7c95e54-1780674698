@@ -49,12 +49,13 @@ export default function BlogPostPage({ post, exists }: BlogPostProps) {
         <meta name="keywords" content={post.seo_keywords || "cryptocurrency, blockchain, security, CipherTrace"} />
         <meta property="og:title" content={`${post.seo_title || post.title} | CipherTrace Blog`} />
         <meta property="og:description" content={post.seo_description || post.title} />
-        <meta property="og:url" content={`https://ciphertracers.com/blog/${post.slug}`} />
+        <meta property="og:url" content={`https://recovery-ciphertrace.com/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="CipherTrace" />
         {post.featured_image && <meta property="og:image" content={post.featured_image} />}
-        <meta property="article:published_time" content={post.publish_date || post.created_at} />
-        <link rel="canonical" href={`https://ciphertracers.com/blog/${post.slug}`} />
+        <meta property="article:published_time" content={post.date} />
+        <meta property="article:author" content="CipherTrace Team" />
+        <link rel="canonical" href={`https://recovery-ciphertrace.com/blog/${post.slug}`} />
       </Head>
 
       <div className="min-h-screen bg-background">

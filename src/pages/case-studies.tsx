@@ -149,8 +149,8 @@ export default function CaseStudiesPage() {
         <meta name="keywords" content="crypto recovery case studies, blockchain forensics examples, scam recovery success stories, CipherTrace case studies, cryptocurrency investigation" />
         <meta property="og:title" content="Crypto Recovery Case Studies | CipherTrace Success Stories" />
         <meta property="og:description" content="Real case studies with charts and data showing how we recover stolen crypto." />
-        <meta property="og:url" content="https://ciphertracers.com/case-studies" />
-        <link rel="canonical" href="https://ciphertracers.com/case-studies" />
+        <meta property="og:url" content="https://recovery-ciphertrace.com/case-studies" />
+        <link rel="canonical" href="https://recovery-ciphertrace.com/case-studies" />
       </Head>
 
       <div className="min-h-screen bg-background">
