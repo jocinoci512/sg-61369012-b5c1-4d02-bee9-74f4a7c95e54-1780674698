@@ -218,7 +218,7 @@ Reference ID: ${newReferenceId}
       const web3formsKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
 
       if (!web3formsKey) {
-        throw new Error("Email service not configured. Please contact support directly at support@backtracers.com");
+        throw new Error("Email service not configured. Please contact support directly at support@recovery-ciphertrace.com");
       }
 
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -232,7 +232,7 @@ Reference ID: ${newReferenceId}
           from_name: formData.fullName,
           email: formData.email,
           message: emailContent,
-          to_email: "support@backtracers.com"
+          to_email: "support@recovery-ciphertrace.com"
         }),
       });
 
@@ -267,7 +267,7 @@ Reference ID: ${newReferenceId}
       }
     } catch (err) {
       setSubmitting(false);
-      setError(err instanceof Error ? err.message : "Failed to submit report. Please try again or email us directly at support@backtracers.com");
+      setError(err instanceof Error ? err.message : "Failed to submit report. Please try again or email us directly at support@recovery-ciphertrace.com");
       console.error("Fraud report error:", err);
     }
   };
