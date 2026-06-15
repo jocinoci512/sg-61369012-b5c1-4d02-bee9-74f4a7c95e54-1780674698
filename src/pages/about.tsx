@@ -88,7 +88,7 @@ export default function AboutPage() {
       <Head>
         <title>About Us | CipherTrace Recovery - Expert Blockchain Forensics Team</title>
         <meta name="description" content="Meet the expert team behind CipherTrace Recovery. Former FBI investigators, certified blockchain forensics analysts, and legal professionals with 99.8% success rate." />
-        <link rel="canonical" href="https://ciphertracers.com/about" />
+        <link rel="canonical" href="https://recovery-ciphertrace.com/about" />
       </Head>
 
       <div className="min-h-screen bg-background">

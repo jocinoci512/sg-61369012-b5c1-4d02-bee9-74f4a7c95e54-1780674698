@@ -41,9 +41,9 @@ export default function HomePage() {
         <meta name="keywords" content="crypto recovery, blockchain forensics, cryptocurrency fraud investigation, stolen crypto, fund recovery, scam recovery, digital asset tracing" />
         <meta property="og:title" content="CipherTrace Recovery | Recover Your Stolen Crypto Assets" />
         <meta property="og:description" content="Professional blockchain investigation and fund recovery. Trace stolen cryptocurrency across global networks with financial-grade forensics." />
-        <meta property="og:url" content="https://ciphertracers.com" />
+        <meta property="og:url" content="https://recovery-ciphertrace.com" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ciphertracers.com" />
+        <link rel="canonical" href="https://recovery-ciphertrace.com" />
       </Head>
 
       <div className="min-h-screen bg-background">

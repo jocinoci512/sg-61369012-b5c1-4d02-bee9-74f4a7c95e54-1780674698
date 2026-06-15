@@ -75,9 +75,9 @@ export default function ServicesPage() {
         <meta name="keywords" content="CipherTracers services, AML Sentry, Traveler FATF, Blockchain Inspector, Armada threat intelligence, crypto de-anonymization, ransomware detection" />
         <meta property="og:title" content="CipherTracers Services | Advanced Blockchain Security Solutions" />
         <meta property="og:description" content="Empowering businesses and individuals with cutting-edge tools for crypto AML, forensics, and threat intelligence." />
-        <meta property="og:url" content="https://ciphertracers.com/services" />
+        <meta property="og:url" content="https://recovery-ciphertrace.com/services" />
         <meta property="og:site_name" content="CipherTracers" />
-        <link rel="canonical" href="https://ciphertracers.com/services" />
+        <link rel="canonical" href="https://recovery-ciphertrace.com/services" />
       </Head>
 
       <div className="min-h-screen bg-background">
