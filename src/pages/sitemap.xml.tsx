@@ -117,10 +117,28 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
       priority: 0.8,
     },
     {
+      url: `${SITE_URL}/success-stories`,
+      lastmod: currentDate,
+      changefreq: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/testimonials`,
+      lastmod: currentDate,
+      changefreq: "weekly",
+      priority: 0.7,
+    },
+    {
       url: `${SITE_URL}/reviews`,
       lastmod: currentDate,
       changefreq: "weekly",
       priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/teams`,
+      lastmod: currentDate,
+      changefreq: "monthly",
+      priority: 0.7,
     },
   ];
 
