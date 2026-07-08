@@ -5,7 +5,6 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta name="google-site-verification" content="D9UIfk6fHaBnZDTFA8tEUdXPnd8pEMUDLSEqfEqpdz4" />
-        <SEOElements />
       </Head>
       <body>
         <Main />
